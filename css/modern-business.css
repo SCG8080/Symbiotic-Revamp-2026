@@ -1,0 +1,128 @@
+/*!
+ * Start Bootstrap - Modern Business (https://startbootstrap.com/template-overviews/modern-business)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-logomodern-business-nav/blob/master/LICENSE)
+ */
+body {
+  padding-top: 56px;
+}
+
+.carousel-item {
+  height: 85vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.portfolio-item {
+  margin-bottom: 30px;
+}
+
+.carousel-caption h3 {
+  font-weight: bold;
+  font-size: 1.2em; /* small size since this is the default in Bootstrap */
+  text-align:center;
+}
+
+.carousel-caption p {
+  font-size: 1em; /* small size since this is the default in Bootstrap */
+  text-align:center;
+}
+@media (min-width: 576px) { 
+.carousel-caption h3 { font-size: 1.3em;}
+.carousel-caption p {font-size: 1.1em;}  
+}
+@media (min-width: 768px) {
+.carousel-caption h3 { font-size: 1.4em;}
+.carousel-caption p {font-size: 1.2em;}  
+}
+@media (min-width: 992px) { 
+.carousel-caption h3 { font-size: 1.5em;}
+.carousel-caption p {font-size: 1.3em;}  
+}
+@media (min-width: 1200px) { 
+.carousel-caption h3 { font-size: 1.6em;}
+.carousel-caption p {font-size: 1.4em;}  
+}
+.carousel-caption {
+ top:80%;
+  }
+  
+  
+  /* .carousel-control-prev-icon {
+    background-image: url('https://apufpel.com.br/assets/img/seta_prim.png')
+}
+
+.carousel-control-next-icon {
+    background-color:black;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23F0F' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+} */
+
+/* .carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  outline: black;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-image: none;
+}
+
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 55px;
+  color: red;
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 55px;
+  color: red;
+} */
+
+.fa {
+    padding-left: 0px;
+    padding-top:10px;
+    font-size: 20px;
+    width: 30px;
+    text-align: left;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+  
+
+.mynav a.nav-link:hover {
+    color: #FFF;
+    border-bottom: #3a5675 solid 1px;
+}
+a.active{
+  border-bottom: #3a5675 solid 1px;
+}
+
+ul {
+  list-style-image: url(../Images/ul_li.gif);
+  list-style-type: square;
+}
+
+.dropdown:hover>.dropdown-menu {
+  display: block;
+}
+
+p {
+  text-align: justify;
+}
+
+.card-text{
+  text-align: left;
+}
+
+.outer-1 {
+  /*background-color:blue;*/
+  border:1px dotted black;
+  border-radius: 50%;
+}
