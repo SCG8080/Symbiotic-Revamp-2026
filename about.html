@@ -1,32 +1,50 @@
-<html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="description" content="Symbiotic Consulting Group - About Us.">
+  <meta name="author" content="SCG">
 
-  <title>About- Symbiotic Consulting Group</title>
+  <title>About Us | Symbiotic Consulting Group</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- Custom styles for this template -->
   <link href="css/modern-business.css" rel="stylesheet">
+  <!-- New Premium Design System -->
+  <link href="css/design-system.css" rel="stylesheet">
 
+  <style>
+    .page-header {
+      padding-top: 120px;
+      padding-bottom: 60px;
+      text-align: center;
+      background: linear-gradient(180deg, rgba(0,168,153,0.05) 0%, rgba(248,250,252,1) 100%);
+    }
+
+    .about-image {
+      box-shadow: 0 20px 40px -10px rgba(0,0,0,0.15);
+      border-radius: 24px;
+      transition: transform 0.5s;
+    }
+    .about-image:hover {
+      transform: scale(1.02);
+    }
+  </style>
 </head>
 
 <body>
 
   <!-- Navigation -->
-  <nav class="mynav navbar fixed-top navbar-expand-lg navbar-light bg-white fixed-top">
+  <nav class="mynav navbar fixed-top navbar-expand-lg navbar-light fixed-top">
     <div class="container">
       <div class="logo">
         <a href="index.html">
-          <img src="images/SCG.png" width="300" height="75" border="0" alt="logo" />
+          <img src="images/SCG.png" height="50" border="0" alt="logo" style="filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.1));" />
         </a>
       </div>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
@@ -47,17 +65,16 @@
               <a class="dropdown-item" href="https://www.dice.com/company/10507176" target="_blank">Current Positions</a>
             </div>
           </li>
-
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="services.html" id="navbarDropdownPortfolio"  aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="services.html" id="navbarDropdownServices" aria-haspopup="true" aria-expanded="false">
               Services
             </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-              <a class="dropdown-item " href="Application_development.html">Application Development</a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownServices">
+              <a class="dropdown-item" href="Application_development.html">Application Development</a>
               <a class="dropdown-item" href="BusinessIntelligence.html">Business Intelligence</a>
               <a class="dropdown-item" href="MobileApplication.html">Mobile Application</a>
               <a class="dropdown-item" href="Infrastructuresupport.html">Infrastructure support</a>
-              <a class="dropdown-item" href="OffshoreSupport.html">Offshore Support</a>
+              <a class="dropdown-item" href="offshoreSupport.html">Offshore Support</a>
               <a class="dropdown-item" href="ProjectManagement.html">Project Management</a>
               <a class="dropdown-item" href="Collaboration.html">Collaboration</a>
               <a class="dropdown-item" href="StrategicStaff.html">Strategic Staff</a>
@@ -74,9 +91,6 @@
             <a class="nav-link" href="careers.html">Careers</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="socialmedia.html">Social Media</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="contact.html">Contact Us</a>
           </li>
         </ul>
@@ -84,142 +98,129 @@
     </div>
   </nav>
 
-</br>
-</br>
-  <!-- Page Content -->
-  <div class="container">
-
-    <!-- Page Heading/Breadcrumbs -->
-    <h2 class="mt-4 mb-3">About Us
-    </h2>
-
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item">
-        <a href="index.html">Home</a>
-      </li>
-      <li class="breadcrumb-item active">About Us</li>
-    </ol>
-
-    <!-- Intro Content -->
-    <div class="row">
-      <div class="col-lg-6">
-        <img class="img-fluid rounded mb-4" src="images/about-us.jpg" alt="">
-      </div>
-      <div class="col-lg-6">
-        <h2>About Symbiotic Consulting Group</h2>
-        <p>Symbiotic Consulting Group is one of the fastest growing information technology providers, offering a wide range of IT services and solutions. At Symbiotic Consulting Group, our mission is to empower our clients through technology and business process improvements. Through effective partnering, we are able to successfully design and build world class solutions targeted to answering our client’s needs.</p>
-        <p><b> </b></p><h3><b>Our Commitment </b></h3>
-          <p></p><ul>
-            <li>Commitment to building a best in class partnership with each of our clients to deliver innovative, thoughtful leadership strategies that increase business value.</li>
-            <li>Collaborative engagements that exceed customer expectations built on mutual respect and trust.</li>
-            <li>Fostering a winning culture that inspires vision, creativity and passion in everything that we do.</li>
-          </ul>
-          <p></p>
-          <!-- <p><b>Core Values</b>
-            <ul>
-              <li>Be Top-Notch: We are always learning and growing, striving to be leaders in our space.</li>
-              <li>Understand the Client Pain Points: We understand our client’s pain points (and business needs) and always aim to exceed all expectations.</li>
-              <li>Always Deliver: We earn your business the old fashion way– by never quitting and always delivering world class product &amp; solutions.</li>
-            </ul>
-            </p> -->
-      </div>
+  <!-- Page Header -->
+  <div class="page-header reveal-up">
+    <div class="container">
+      <h1 class="display-4 font-weight-bold">About <span class="text-gradient">Symbiotic</span></h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb justify-content-center bg-transparent p-0 mt-3">
+          <li class="breadcrumb-item"><a href="index.html" class="text-secondary">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">About Us</li>
+        </ol>
+      </nav>
     </div>
-
-
-
-<hr>
-
-
-<div class="row">
-       
-<div class="col-lg-6">
-        
-        
-        <p><b></b></p><h3><b>Core Values</b></h3>
-          <p></p><ul>
-    <li><b>Be Top-Notch:</b> We are always learning and growing, striving to be leaders in our space.</li>
-    <li><b>Understand the Client Pain Points:</b> We understand our client’s pain points (and business needs) and always aim to exceed all expectations.</li>
-    <li><b>Always Deliver:</b> We earn your business the old fashion way– by never quitting and always delivering world class product &amp; solutions.</li>
-
-
-    <li><b>Always Exceed Expectations:</b> We accept the responsibility that clients and talent entrust us with to advance their business and careers.</li>
-
-
-    <li><b>Mutual Success (hence, truly "Symbiotic"):</b> We will always make a positive contribution to those we serve and believe in building a long term win-win relationship for mutual success.</li>
-
-          </ul>
-        
-      </div>
-
-<div class="col-lg-6">
-        <img class="img-fluid rounded mb-4" src="images/core values.jpg" alt="">
-      </div>
-      
-    </div>
-    <!-- /.row -->
-
-    <!-- Team Members -->
-    
-
-    
-    <!-- /.row -->
-
-    <!-- Our Customers -->
-    
-    
-    <!-- /.row -->
-
   </div>
-  <!-- /.container -->
+
+  <!-- Page Content -->
+  <div class="container py-5">
+    <div class="row align-items-center mb-5 reveal-up">
+      <div class="col-lg-6 mb-4 mb-lg-0 pr-lg-5">
+        <h2 class="mb-4">Driving <span class="text-gradient">Innovation</span> Globally</h2>
+        <p class="text-secondary mb-4" style="font-size: 1.1rem;">Symbiotic Consulting Group is one of the fastest-growing information technology providers, offering a wide range of IT services and solutions.</p>
+        <p class="text-secondary">At Symbiotic Consulting Group, our mission is to empower our clients through technology and business process improvements. Through effective partnering, we are able to successfully design and build world-class solutions targeted to answering our client’s needs.</p>
+      </div>
+      <div class="col-lg-6">
+        <img class="img-fluid about-image" src="images/about-us.jpg" alt="About Us">
+      </div>
+    </div>
+
+    <div class="row align-items-center mb-5 reveal-up" style="transition-delay: 0.2s;">
+      <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0 pl-lg-5">
+        <h2 class="mb-4">Our <span class="text-gradient">Commitment</span></h2>
+        <div class="glass-panel p-4">
+          <ul class="list-unstyled mb-0">
+            <li class="mb-3 d-flex">
+              <i class="fa fa-check-circle text-success mt-1 mr-3 fa-lg"></i>
+              <span class="text-secondary">Commitment to building a best-in-class partnership with each of our clients to deliver innovative, thoughtful leadership strategies that increase business value.</span>
+            </li>
+            <li class="mb-3 d-flex">
+              <i class="fa fa-check-circle text-success mt-1 mr-3 fa-lg"></i>
+              <span class="text-secondary">Collaborative engagements that exceed customer expectations built on mutual respect and trust.</span>
+            </li>
+            <li class="d-flex">
+              <i class="fa fa-check-circle text-success mt-1 mr-3 fa-lg"></i>
+              <span class="text-secondary">Fostering a winning culture that inspires vision, creativity, and passion in everything that we do.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-6 order-lg-1">
+        <img class="img-fluid about-image" src="images/core values.jpg" alt="Core Values">
+      </div>
+    </div>
+
+    <div class="mb-5 reveal-scale">
+      <div class="glass-panel p-5 text-center">
+        <h2 class="mb-5">Our Core <span class="text-gradient">Values</span></h2>
+        <div class="row text-left">
+          <div class="col-md-6 mb-4">
+            <h4 style="color: var(--primary-color)">Be Top-Notch</h4>
+            <p class="text-secondary">We are always learning and growing, striving to be leaders in our space.</p>
+          </div>
+          <div class="col-md-6 mb-4">
+            <h4 style="color: var(--secondary-color)">Understand Pain Points</h4>
+            <p class="text-secondary">We understand our client’s pain points (and business needs) and always aim to exceed all expectations.</p>
+          </div>
+          <div class="col-md-6 mb-4">
+            <h4 style="color: var(--accent-color)">Always Deliver</h4>
+            <p class="text-secondary">We earn your business the old-fashioned way– by never quitting and always delivering world-class products & solutions.</p>
+          </div>
+          <div class="col-md-6 mb-4">
+            <h4 style="color: var(--primary-color)">Exceed Expectations</h4>
+            <p class="text-secondary">We accept the responsibility that clients and talent entrust us with to advance their business and careers.</p>
+          </div>
+          <div class="col-12 text-center mt-3">
+            <div class="p-4 rounded" style="background: rgba(38,168,224,0.1);">
+              <h4 style="color: var(--secondary-color)">Mutual Success</h4>
+              <p class="text-secondary mb-0">We will always make a positive contribution to those we serve and believe in building a long-term win-win relationship for mutual success (hence, truly "Symbiotic").</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Footer -->
-  <footer class="py-5" style="background-color:#3a5675;">
+  <footer class="footer-premium mt-5">
     <div class="container">
-      <div class="row text-white" style="font-size: 12px">
-        <div class="col-lg-6 text-left text-white">
-            <p><h6><u>Symbiotic Consulting Group</u></h6></p>
-            <p>Symbiotic Consulting Group is one of the fastest growing providers of information technology consulting offering a wide range of IT services and solutions for clients interested in the US region and around the globe.</p>
+      <div class="row">
+        <div class="col-lg-5 mb-4">
+          <img src="images/SCG.png" height="40" alt="logo" class="mb-3" style="filter: brightness(0) invert(1) opacity(0.8);" />
+          <p class="text-muted pr-lg-5">Symbiotic Consulting Group is one of the fastest growing providers of information technology consulting offering a wide range of IT services and solutions globally.</p>
         </div>
-        <div class="col-lg-3 text-left">
-            <p><h6><u>Find Out More</u></h6></p>
-            <a class=" text-white" href="about.html">About Us</a><br>
-            <a class=" text-white" href="services.html">Services</a><br>
-            <a class=" text-white" href="industry-solutions.html">Industry Solutions</a><br>
-            <a class=" text-white" href="clientele.html">Clientele</a><br>
-            <a class=" text-white" href="careers.html">Careers</a><br>
-            <a class=" text-white" href="contact.html">Contact Us</a><br>
-            <a class=" text-white" href="socialmedia.html">Social Feed</a><br>
+        <div class="col-lg-3 mb-4">
+          <h6 class="text-white mb-3 text-uppercase" style="letter-spacing: 1px;">Quick Links</h6>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="about.html">About Us</a></li>
+            <li class="mb-2"><a href="services.html">Services</a></li>
+            <li class="mb-2"><a href="industry-solutions.html">Industry Solutions</a></li>
+            <li class="mb-2"><a href="careers.html">Careers</a></li>
+          </ul>
         </div>
-        <div class="col-lg-3 text-left">
-            <p><h6><u><a class=" text-white" href="contact.html">Contact Us</a></u></h6></p>
-            <p>
-                1861, Banks Road
-                <br>Margate, FL 33063
-                <br>Phone: 561-922-0120
-                <br>Fax: 561-455-9893
-            </p>
-            <a class="text-white" href="mailto:info@symbioticconsultinggroup.com">info@symbioticconsultinggroup.com</a><br>
-            <a href="https://www.linkedin.com/company/symbiotic-consulting-group" target="_blank" class="fa fa-linkedin text-white"></a>
-            <a href="https://www.facebook.com/symbioticco" target="_blank" class="fa fa-facebook text-white"></a>
-            <a href="http://www.youtube.com/SymbioticCo" target="_blank" class="fa fa-youtube text-white"></a>
-            <a href="https://twitter.com/Symbioticco" target="_blank" class="fa fa-twitter text-white"></a>
+        <div class="col-lg-4 mb-4">
+          <h6 class="text-white mb-3 text-uppercase" style="letter-spacing: 1px;">Contact Us</h6>
+          <p class="text-muted mb-2"><i class="fa fa-map-marker mr-2"></i> 1861, Banks Road, Margate, FL 33063</p>
+          <p class="text-muted mb-2"><i class="fa fa-phone mr-2"></i> 561-922-0120</p>
+          <p class="text-muted mb-3"><i class="fa fa-envelope mr-2"></i> <a href="mailto:info@symbioticconsultinggroup.com">info@symbioticconsultinggroup.com</a></p>
+          
+          <div class="mt-3">
+            <a href="https://www.linkedin.com/company/symbiotic-consulting-group" target="_blank" class="fa fa-linkedin fa-lg mr-3"></a>
+            <a href="https://www.facebook.com/symbioticco" target="_blank" class="fa fa-facebook fa-lg mr-3"></a>
+            <a href="https://twitter.com/Symbioticco" target="_blank" class="fa fa-twitter fa-lg"></a>
+          </div>
         </div>
       </div>
-     <div class="row text-white" style="font-size: 12px">
-       <br><br>
-        <p class="text-left"><b>Copyright &copy; Symbiotic Consulting Group 2011 - <script>document.write(new Date().getFullYear())</script></b><br>
-        Symbiotic Consulting Group is an Equal Opportunity Employer. All qualified applicants will receive consideration for employment without regard to race, color, age, religion, sex, sexual orientation, gender identity / expression, national origin, protected veteran status, or any other characteristic protected under federal, state or local law, where applicable, and those with criminal histories will be considered in a manner consistent with applicable state and local laws.</p>
-     </div>
+      <div class="border-top border-secondary mt-4 pt-4 text-center text-muted">
+        <p class="mb-0">&copy; <script>document.write(new Date().getFullYear())</script> Symbiotic Consulting Group. All Rights Reserved.</p>
+      </div>
     </div>
-    <!-- /.container -->
   </footer>
-
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Animations JS -->
+  <script src="js/animations.js"></script>
 
-
-
-
-</body></html>
+</body>
+</html>

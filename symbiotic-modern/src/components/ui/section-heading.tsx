@@ -16,19 +16,22 @@ export function SectionHeading({
   return (
     <div className={align === "center" ? "mx-auto max-w-3xl text-center" : "max-w-3xl"}>
       {eyebrow ? (
-        <p className="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#00a899]">
-          {eyebrow}
-        </p>
+        <div className={`mb-4 inline-flex items-center gap-3 ${align === "center" ? "justify-center" : ""}`}>
+          <span className="h-px w-6 bg-teal" />
+          <p className="text-xs font-bold uppercase tracking-[0.24em] text-teal">
+            {eyebrow}
+          </p>
+        </div>
       ) : null}
       <h2
-        className={`text-balance text-3xl font-semibold tracking-tight sm:text-4xl ${
-          inverse ? "text-white" : "text-[#102c35]"
+        className={`font-display text-balance text-4xl font-bold tracking-tight sm:text-5xl ${
+          inverse ? "text-white" : "text-white"
         }`}
       >
         {title}
       </h2>
       {text ? (
-        <p className={`mt-4 text-base leading-8 ${inverse ? "text-white/75" : "text-[#5d6c70]"}`}>
+        <p className={`mt-6 text-lg leading-relaxed ${inverse ? "text-slate-400" : "text-slate-400"}`}>
           {text}
         </p>
       ) : null}

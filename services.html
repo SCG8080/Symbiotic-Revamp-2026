@@ -2,13 +2,12 @@
 <html lang="en">
 
 <head>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="description" content="Symbiotic Consulting Group - Our Services.">
+  <meta name="author" content="SCG">
 
-  <title>Services- Symbiotic Consulting Group</title>
+  <title>Services | Symbiotic Consulting Group</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -16,17 +15,70 @@
 
   <!-- Custom styles for this template -->
   <link href="css/modern-business.css" rel="stylesheet">
+  <!-- New Premium Design System -->
+  <link href="css/design-system.css" rel="stylesheet">
 
+  <style>
+    .page-header {
+      padding-top: 120px;
+      padding-bottom: 60px;
+      text-align: center;
+      background: linear-gradient(180deg, rgba(38,168,224,0.05) 0%, rgba(248,250,252,1) 100%);
+    }
+
+    .service-card {
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      border: none;
+      background: var(--glass-bg);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-icon-container {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      background: linear-gradient(135deg, rgba(0,168,153,0.1), rgba(38,168,224,0.1));
+    }
+
+    .service-icon {
+      font-size: 2.5rem;
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .service-btn {
+      border-radius: 50px;
+      padding: 8px 24px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      transition: var(--transition-smooth);
+    }
+  </style>
 </head>
 
 <body>
 
   <!-- Navigation -->
-  <nav class="mynav navbar fixed-top navbar-expand-lg navbar-light bg-white fixed-top">
+  <nav class="mynav navbar fixed-top navbar-expand-lg navbar-light fixed-top">
     <div class="container">
       <div class="logo">
         <a href="index.html">
-          <img src="images/SCG.png" width="300" height="75" border="0" alt="logo" />
+          <img src="images/SCG.png" height="50" border="0" alt="logo" style="filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.1));" />
         </a>
       </div>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
@@ -47,17 +99,16 @@
               <a class="dropdown-item" href="https://www.dice.com/company/10507176" target="_blank">Current Positions</a>
             </div>
           </li>
-
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle active" href="services.html" id="navbarDropdownPortfolio"  aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle active" href="services.html" id="navbarDropdownServices" aria-haspopup="true" aria-expanded="false">
               Services
             </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-              <a class="dropdown-item " href="Application_development.html">Application Development</a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownServices">
+              <a class="dropdown-item" href="Application_development.html">Application Development</a>
               <a class="dropdown-item" href="BusinessIntelligence.html">Business Intelligence</a>
               <a class="dropdown-item" href="MobileApplication.html">Mobile Application</a>
               <a class="dropdown-item" href="Infrastructuresupport.html">Infrastructure support</a>
-              <a class="dropdown-item" href="OffshoreSupport.html">Offshore Support</a>
+              <a class="dropdown-item" href="offshoreSupport.html">Offshore Support</a>
               <a class="dropdown-item" href="ProjectManagement.html">Project Management</a>
               <a class="dropdown-item" href="Collaboration.html">Collaboration</a>
               <a class="dropdown-item" href="StrategicStaff.html">Strategic Staff</a>
@@ -74,196 +125,190 @@
             <a class="nav-link" href="careers.html">Careers</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="socialmedia.html">Social Media</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="contact.html">Contact Us</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-  <br><br>
-  <!-- Page Content -->
-  <div class="container">
 
-    <!-- Page Heading/Breadcrumbs -->
-    <h2 class="mt-4 mb-3">Our Services
-    </h2>
-
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item">
-        <a href="index.html">Home</a>
-      </li>
-      <li class="breadcrumb-item active">Services</li>
-    </ol>
-
-    <!-- Image Header -->
-    <img class="img-fluid rounded mb-4" width="1110" height="617"  src="Images/Our-Services2.jpg" alt="">
-    <p></br><b style="color:#3a5675;">Symbiotic Consulting Group</b>  has a proven record in providing business solutions to our clients with the most talented people in the consulting world. By providing our tangible service, clients choose us to meet their placement: contract-to-hire, contract, and/or permanent staffing needs. In today's technology - driven market economy, the benefits if hiring contractors on a consulting standard against a permanent standard. Even though we consider mostly contract hires, it is a good practice to have permanent hires as well. We provide the solution for hiring either contract or permanent resource based on the client's business need and situations. </p>
-    <!-- Marketing Icons Section -->
-    <div class="row">
-      <div class="col-lg-4 mb-4">
-        <div class="card h-100" style="border-color: #00A899">
-          <h4 class="card-header" style="color: #00A899">Application Development</h4>
-          <div class="card-body">
-            <p class="card-text"><b style="color:#3a5675;">Symbiotic Consulting Group</b> offers leading-edge application development services (Web, Windows & service-oriented architecture) for new solutions</p>
-            
-          </div>
-          <div class="card-footer">
-            <a href="Application_development.html" class="btn" style="color: #00A899">Learn More</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 mb-4">
-        <div class="card h-100" style="border-color: #47B549">
-          <h4 class="card-header" style="color: #47B549">Business Intelligence</h4>
-          <div class="card-body">
-            <p class="card-text">Technology provides a means of collecting and storing data. While most companies today have implemented the tools to master this craft</p>
-            
-          </div>
-          <div class="card-footer">
-            <a href="BusinessIntelligence.html" class="btn" style="color: #47B549">Learn More</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 mb-4">
-        <div class="card h-100" style="border-color: #26A8E0">
-          <h4 class="card-header" style="color: #26A8E0">Mobile Application</h4>
-          <div class="card-body">
-            <p class="card-text"><b style="color:#3a5675;">Symbiotic Consulting Group</b> offers expertise in enabling your mobile workforce.</p>
-            
-          </div>
-          <div class="card-footer">
-            <a href="MobileApplication.html" class="btn" style="color: #26A8E0">Learn More</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 mb-4">
-        <div class="card h-100" style="border-color: #00A899">
-          <h4 class="card-header" style="color: #00A899">Infrastructure Support</h4>
-          <div class="card-body">
-            <p class="card-text">Infrastructure Technologies anticipates and meets the needs of the campus community in the fast-changing environment of ever-increasing network data speeds, server administration, virtualization and green computing, and being responsive to the software and hardware needs of the university.</p>
-            
-          </div>
-          <div class="card-footer">
-            <a href="Infrastructure support.html" class="btn" style="color: #00A899">Learn More</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 mb-4">
-        <div class="card h-100" style="border-color: #47B549">
-          <h4 class="card-header" style="color: #47B549">Offshore Support</h4>
-          <div class="card-body">
-            <p class="card-text"><b style="color:#3a5675;">Symbiotic Consulting Group</b> is one of the fastest growing information technology providers, offering a wide range of IT services and solutions. </p>
-            
-          </div>
-          <div class="card-footer">
-            <a href="OffshoreSupport.html" class="btn" style="color: #47B549">Learn More</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 mb-4">
-        <div class="card h-100" style="border-color: #26A8E0">
-          <h4 class="card-header" style="color: #26A8E0">Project Management</h4>
-          <div class="card-body">
-            <p class="card-text"><b style="color:#3a5675;">Project Management</b> has become a challenging area. Complexities of project, lack of specialist expertise are some of the barriers to effective Project Management causing customer dissatisfaction and burdens the IT team.</p>
-            
-          </div>
-          <div class="card-footer">
-            <a href="ProjectManagement.html" class="btn" style="color: #26A8E0">Learn More</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 mb-4">
-        <div class="card h-100" style="border-color: #00A899">
-          <h4 class="card-header" style="color: #00A899">Collaboration</h4>
-          <div class="card-body">
-            <p class="card-text"><b style="color:#3a5675;">Symbiotic Consulting Group</b> delivers end-to-end Collaboration solutions embracing the latest web portal technologies and business trends that enables an organization to become a ‘community’ with the ability to share information, discuss issues, and easily collaborate on projects. </p>
-            
-          </div>
-          <div class="card-footer">
-            <a href="Collaboration.html" class="btn" style="color: #00A899">Learn More</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 mb-4">
-        <div class="card h-100" style="border-color: #47B549">
-          <h4 class="card-header" style="color: #47B549">Strategic Staff</h4>
-          <div class="card-body">
-            <p class="card-text">The key to success is to get trained people at the right time and get the job done in order to meet the business objectives. With the ever-increasing need for companies to be competitive in this dynamic marketplace.</p>
-            
-          </div>
-          <div class="card-footer">
-            <a href="StrategicStaff.html" class="btn" style="color: #47B549">Learn More</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 mb-4">
-        <div class="card h-100" style="border-color: #26A8E0">
-          <h4 class="card-header" style="color: #26A8E0">Project Development</h4>
-          <div class="card-body">
-            <p class="card-text"><b style="color:#3a5675;">Symbiotic Consulting Group</b> offers leading-edge application development services (Web, Windows & service-oriented architecture) for new solutions, as well as functional enhancement and maintenance of existing applications. </p>
-            
-          </div>
-          <div class="card-footer">
-            <a href="ProductDevelopment.html" class="btn" style="color: #26A8E0">Learn More</a>
-          </div>
-        </div>
-      </div>
-      
+  <!-- Page Header -->
+  <div class="page-header reveal-up">
+    <div class="container">
+      <h1 class="display-4 font-weight-bold">Our <span class="text-gradient">Services</span></h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb justify-content-center bg-transparent p-0 mt-3">
+          <li class="breadcrumb-item"><a href="index.html" class="text-secondary">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Services</li>
+        </ol>
+      </nav>
     </div>
-    <!-- /.row -->
-
   </div>
-  <!-- /.container -->
+
+  <!-- Page Content -->
+  <div class="container py-5">
+    
+    <div class="row mb-5 reveal-up">
+      <div class="col-lg-8 mx-auto text-center">
+        <p class="lead text-secondary">
+          Symbiotic Consulting Group has a proven record in providing business solutions to our clients with the most talented people in the consulting world. We provide tangible solutions for contract-to-hire, contract, and permanent staffing based on your specific business needs.
+        </p>
+      </div>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="row">
+      <!-- Service 1 -->
+      <div class="col-lg-4 col-md-6 mb-5 reveal-scale" style="transition-delay: 0.1s;">
+        <div class="card h-100 service-card p-4 text-center">
+          <div class="service-icon-container">
+            <i class="fa fa-laptop service-icon"></i>
+          </div>
+          <h4 class="mb-3" style="color: var(--primary-color)">Application Development</h4>
+          <p class="text-secondary mb-4 flex-grow-1">Leading-edge application development services (Web, Windows & SOA) for new solutions.</p>
+          <a href="Application_development.html" class="btn btn-outline-info service-btn" style="border-color: var(--primary-color); color: var(--primary-color);">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="col-lg-4 col-md-6 mb-5 reveal-scale" style="transition-delay: 0.2s;">
+        <div class="card h-100 service-card p-4 text-center">
+          <div class="service-icon-container">
+            <i class="fa fa-bar-chart service-icon"></i>
+          </div>
+          <h4 class="mb-3" style="color: var(--accent-color)">Business Intelligence</h4>
+          <p class="text-secondary mb-4 flex-grow-1">Harness the power of data. We provide tools to collect, store, and master data analytics.</p>
+          <a href="BusinessIntelligence.html" class="btn btn-outline-success service-btn" style="border-color: var(--accent-color); color: var(--accent-color);">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="col-lg-4 col-md-6 mb-5 reveal-scale" style="transition-delay: 0.3s;">
+        <div class="card h-100 service-card p-4 text-center">
+          <div class="service-icon-container">
+            <i class="fa fa-mobile service-icon"></i>
+          </div>
+          <h4 class="mb-3" style="color: var(--secondary-color)">Mobile Application</h4>
+          <p class="text-secondary mb-4 flex-grow-1">Expertise in enabling your mobile workforce through cutting-edge app development.</p>
+          <a href="MobileApplication.html" class="btn btn-outline-primary service-btn" style="border-color: var(--secondary-color); color: var(--secondary-color);">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="col-lg-4 col-md-6 mb-5 reveal-scale" style="transition-delay: 0.1s;">
+        <div class="card h-100 service-card p-4 text-center">
+          <div class="service-icon-container">
+            <i class="fa fa-server service-icon"></i>
+          </div>
+          <h4 class="mb-3" style="color: var(--primary-color)">Infrastructure Support</h4>
+          <p class="text-secondary mb-4 flex-grow-1">Anticipating needs in fast-changing environments: networking, server administration, and virtualization.</p>
+          <a href="Infrastructuresupport.html" class="btn btn-outline-info service-btn" style="border-color: var(--primary-color); color: var(--primary-color);">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Service 5 -->
+      <div class="col-lg-4 col-md-6 mb-5 reveal-scale" style="transition-delay: 0.2s;">
+        <div class="card h-100 service-card p-4 text-center">
+          <div class="service-icon-container">
+            <i class="fa fa-globe service-icon"></i>
+          </div>
+          <h4 class="mb-3" style="color: var(--accent-color)">Offshore Support</h4>
+          <p class="text-secondary mb-4 flex-grow-1">Leverage global talent with our comprehensive offshore IT services and solutions.</p>
+          <a href="OffshoreSupport.html" class="btn btn-outline-success service-btn" style="border-color: var(--accent-color); color: var(--accent-color);">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Service 6 -->
+      <div class="col-lg-4 col-md-6 mb-5 reveal-scale" style="transition-delay: 0.3s;">
+        <div class="card h-100 service-card p-4 text-center">
+          <div class="service-icon-container">
+            <i class="fa fa-tasks service-icon"></i>
+          </div>
+          <h4 class="mb-3" style="color: var(--secondary-color)">Project Management</h4>
+          <p class="text-secondary mb-4 flex-grow-1">Overcome project complexities with our specialist expertise and effective management frameworks.</p>
+          <a href="ProjectManagement.html" class="btn btn-outline-primary service-btn" style="border-color: var(--secondary-color); color: var(--secondary-color);">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Service 7 -->
+      <div class="col-lg-4 col-md-6 mb-5 reveal-scale" style="transition-delay: 0.1s;">
+        <div class="card h-100 service-card p-4 text-center">
+          <div class="service-icon-container">
+            <i class="fa fa-users service-icon"></i>
+          </div>
+          <h4 class="mb-3" style="color: var(--primary-color)">Collaboration</h4>
+          <p class="text-secondary mb-4 flex-grow-1">End-to-end solutions embracing the latest web portal technologies for community sharing.</p>
+          <a href="Collaboration.html" class="btn btn-outline-info service-btn" style="border-color: var(--primary-color); color: var(--primary-color);">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Service 8 -->
+      <div class="col-lg-4 col-md-6 mb-5 reveal-scale" style="transition-delay: 0.2s;">
+        <div class="card h-100 service-card p-4 text-center">
+          <div class="service-icon-container">
+            <i class="fa fa-user-plus service-icon"></i>
+          </div>
+          <h4 class="mb-3" style="color: var(--accent-color)">Strategic Staffing</h4>
+          <p class="text-secondary mb-4 flex-grow-1">Get trained people at the right time to meet your business objectives in a dynamic marketplace.</p>
+          <a href="StrategicStaff.html" class="btn btn-outline-success service-btn" style="border-color: var(--accent-color); color: var(--accent-color);">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Service 9 -->
+      <div class="col-lg-4 col-md-6 mb-5 reveal-scale" style="transition-delay: 0.3s;">
+        <div class="card h-100 service-card p-4 text-center">
+          <div class="service-icon-container">
+            <i class="fa fa-cogs service-icon"></i>
+          </div>
+          <h4 class="mb-3" style="color: var(--secondary-color)">Product Development</h4>
+          <p class="text-secondary mb-4 flex-grow-1">Functional enhancement and maintenance of existing applications alongside new product builds.</p>
+          <a href="ProductDevelopment.html" class="btn btn-outline-primary service-btn" style="border-color: var(--secondary-color); color: var(--secondary-color);">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Footer -->
-  <footer class="py-5" style="background-color:#3a5675;">
+  <footer class="footer-premium mt-5">
     <div class="container">
-      <div class="row text-white" style="font-size: 12px">
-        <div class="col-lg-6 text-left text-white">
-            <p><h6><u>Symbiotic Consulting Group</u></h6></p>
-            <p>Symbiotic Consulting Group is one of the fastest growing providers of information technology consulting offering a wide range of IT services and solutions for clients interested in the US region and around the globe.</p>
+      <div class="row">
+        <div class="col-lg-5 mb-4">
+          <img src="images/SCG.png" height="40" alt="logo" class="mb-3" style="filter: brightness(0) invert(1) opacity(0.8);" />
+          <p class="text-muted pr-lg-5">Symbiotic Consulting Group is one of the fastest growing providers of information technology consulting offering a wide range of IT services and solutions globally.</p>
         </div>
-        <div class="col-lg-3 text-left">
-            <p><h6><u>Find Out More</u></h6></p>
-            <a class=" text-white" href="about.html">About Us</a><br>
-            <a class=" text-white" href="services.html">Services</a><br>
-            <a class=" text-white" href="industry-solutions.html">Industry Solutions</a><br>
-            <a class=" text-white" href="clientele.html">Clientele</a><br>
-            <a class=" text-white" href="careers.html">Careers</a><br>
-            <a class=" text-white" href="contact.html">Contact Us</a><br>
-            <a class=" text-white" href="socialmedia.html">Social Feed</a><br>
+        <div class="col-lg-3 mb-4">
+          <h6 class="text-white mb-3 text-uppercase" style="letter-spacing: 1px;">Quick Links</h6>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="about.html">About Us</a></li>
+            <li class="mb-2"><a href="services.html">Services</a></li>
+            <li class="mb-2"><a href="industry-solutions.html">Industry Solutions</a></li>
+            <li class="mb-2"><a href="careers.html">Careers</a></li>
+          </ul>
         </div>
-        <div class="col-lg-3 text-left">
-            <p><h6><u><a class=" text-white" href="contact.html">Contact Us</a></u></h6></p>
-            <p>
-                1861, Banks Road
-                <br>Margate, FL 33063
-                <br>Phone: 561-922-0120
-                <br>Fax: 561-455-9893
-            </p>
-            <a class="text-white" href="mailto:info@symbioticconsultinggroup.com">info@symbioticconsultinggroup.com</a><br>
-            <a href="https://www.linkedin.com/company/symbiotic-consulting-group" target="_blank" class="fa fa-linkedin text-white"></a>
-            <a href="https://www.facebook.com/symbioticco" target="_blank" class="fa fa-facebook text-white"></a>
-            <a href="http://www.youtube.com/SymbioticCo" target="_blank" class="fa fa-youtube text-white"></a>
-            <a href="https://twitter.com/Symbioticco" target="_blank" class="fa fa-twitter text-white"></a>
+        <div class="col-lg-4 mb-4">
+          <h6 class="text-white mb-3 text-uppercase" style="letter-spacing: 1px;">Contact Us</h6>
+          <p class="text-muted mb-2"><i class="fa fa-map-marker mr-2"></i> 1861, Banks Road, Margate, FL 33063</p>
+          <p class="text-muted mb-2"><i class="fa fa-phone mr-2"></i> 561-922-0120</p>
+          <p class="text-muted mb-3"><i class="fa fa-envelope mr-2"></i> <a href="mailto:info@symbioticconsultinggroup.com">info@symbioticconsultinggroup.com</a></p>
+          
+          <div class="mt-3">
+            <a href="https://www.linkedin.com/company/symbiotic-consulting-group" target="_blank" class="fa fa-linkedin fa-lg mr-3"></a>
+            <a href="https://www.facebook.com/symbioticco" target="_blank" class="fa fa-facebook fa-lg mr-3"></a>
+            <a href="https://twitter.com/Symbioticco" target="_blank" class="fa fa-twitter fa-lg"></a>
+          </div>
         </div>
       </div>
-     <div class="row text-white" style="font-size: 12px">
-       <br><br>
-        <p class="text-left"><b>Copyright &copy; Symbiotic Consulting Group 2011 - <script>document.write(new Date().getFullYear())</script></b><br>
-        Symbiotic Consulting Group is an Equal Opportunity Employer. All qualified applicants will receive consideration for employment without regard to race, color, age, religion, sex, sexual orientation, gender identity / expression, national origin, protected veteran status, or any other characteristic protected under federal, state or local law, where applicable, and those with criminal histories will be considered in a manner consistent with applicable state and local laws.</p>
-     </div>
+      <div class="border-top border-secondary mt-4 pt-4 text-center text-muted">
+        <p class="mb-0">&copy; <script>document.write(new Date().getFullYear())</script> Symbiotic Consulting Group. All Rights Reserved.</p>
+      </div>
     </div>
-    <!-- /.container -->
   </footer>
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Animations JS -->
+  <script src="js/animations.js"></script>
 
 </body>
-
 </html>

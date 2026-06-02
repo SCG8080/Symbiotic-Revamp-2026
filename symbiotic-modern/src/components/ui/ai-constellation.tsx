@@ -166,7 +166,7 @@ export function AIConstellation() {
   const nodeMap = useMemo(() => new Map(nodes.map((node) => [node.id, node])), []);
 
   return (
-    <div className="ai-constellation signal-surface relative h-[480px] overflow-hidden rounded-lg border border-white/16 bg-[#071d24]/76 p-4 shadow-[0_34px_120px_rgba(0,0,0,0.36)] backdrop-blur-xl sm:p-5">
+    <div className="ai-constellation signal-surface relative h-[480px] overflow-hidden rounded-lg border border-white/10 bg-obsidian/40 p-4 shadow-[0_34px_120px_rgba(38,168,224,0.15)] backdrop-blur-xl sm:p-5">
       <div className="absolute inset-0 kinetic-grid opacity-25" />
       <div className="absolute inset-0 ai-scanline opacity-55" />
       <div className="relative flex items-start justify-between gap-4">
@@ -176,8 +176,8 @@ export function AIConstellation() {
           </p>
           <p className="mt-2 text-2xl font-semibold text-white">Technology routes to outcomes</p>
         </div>
-        <span className="grid h-11 w-11 shrink-0 place-items-center rounded-lg border border-white/14 bg-white/10 text-[#77e0d5]">
-          <Network className="h-5 w-5" aria-hidden="true" />
+        <span className="grid h-11 w-11 shrink-0 place-items-center rounded-lg border border-scg-teal/30 bg-scg-teal/10 text-scg-teal drop-shadow-[0_0_12px_rgba(0,168,153,0.5)]">
+          <Network className="h-5 w-5 animate-pulse" aria-hidden="true" />
         </span>
       </div>
 
@@ -190,9 +190,9 @@ export function AIConstellation() {
         >
           <defs>
             <linearGradient id="ai-link-gradient" x1="0%" x2="100%" y1="0%" y2="100%">
-              <stop offset="0%" stopColor="#77e0d5" stopOpacity="0.95" />
-              <stop offset="52%" stopColor="#26a8e0" stopOpacity="0.95" />
-              <stop offset="100%" stopColor="#47b549" stopOpacity="0.95" />
+              <stop offset="0%" stopColor="#47B549" stopOpacity="0.95" />
+              <stop offset="50%" stopColor="#26A8E0" stopOpacity="0.95" />
+              <stop offset="100%" stopColor="#00A899" stopOpacity="0.95" />
             </linearGradient>
           </defs>
           {links.map(([sourceId, targetId]) => {
@@ -241,8 +241,8 @@ export function AIConstellation() {
               onMouseEnter={() => setActiveId(node.id)}
               className={`ai-node absolute grid h-12 w-12 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border text-[11px] font-black tracking-[0.08em] transition duration-300 sm:h-14 sm:w-14 sm:text-xs ${
                 active || connected
-                  ? "scale-110 border-white/70 text-white shadow-[0_0_34px_rgba(119,224,213,0.42)]"
-                  : "border-white/22 text-white/70 hover:scale-105"
+                  ? "scale-110 border-scg-blue/60 text-white shadow-[0_0_40px_rgba(38,168,224,0.4)]"
+                  : "border-white/20 text-white/70 hover:scale-105"
               }`}
               style={
                 {
@@ -281,7 +281,7 @@ export function AIConstellation() {
           </div>
           <Link
             href={activeNode.href}
-            className="inline-flex h-10 w-fit shrink-0 items-center gap-2 rounded-md border border-white/14 bg-white/10 px-3 text-sm font-semibold text-white transition hover:border-[#77e0d5]/70 hover:bg-[#77e0d5]/14"
+            className="inline-flex h-10 w-fit shrink-0 items-center gap-2 rounded-md border border-white/14 bg-white/10 px-3 text-sm font-semibold text-white transition hover:border-scg-teal/70 hover:bg-scg-teal/14"
           >
             Open route
             <ArrowUpRight className="h-4 w-4" aria-hidden="true" />

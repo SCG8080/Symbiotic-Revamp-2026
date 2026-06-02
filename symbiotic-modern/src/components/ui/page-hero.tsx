@@ -16,13 +16,13 @@ export function PageHero({
   eyebrow,
   summary,
   image,
-  accent = "#00a899",
-  secondaryAccent = "#26a8e0",
+  accent = "#00e5d1",
+  secondaryAccent = "#3b82f6",
   children,
 }: PageHeroProps) {
   return (
     <section
-      className="relative isolate overflow-hidden bg-[#102c35]"
+      className="relative isolate overflow-hidden bg-obsidian border-b border-white/5"
       style={
         {
           "--hero-accent": accent,
@@ -37,41 +37,51 @@ export function PageHero({
           fill
           priority
           sizes="100vw"
-          className="hero-mask object-cover"
+          className="hero-mask object-cover opacity-60 mix-blend-luminosity"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,26,32,0.96),rgba(6,26,32,0.76)_48%,rgba(6,26,32,0.48))]" />
-        <div className="kinetic-grid absolute inset-0 opacity-35" />
-        <div className="absolute inset-y-0 right-0 w-1/2 bg-[radial-gradient(circle_at_70%_38%,rgba(38,168,224,0.18),transparent_34%),linear-gradient(135deg,transparent,rgba(255,255,255,0.08))]" />
-        <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#f6f8f5] to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-obsidian via-obsidian/80 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-obsidian/40" />
+        <div className="kinetic-grid absolute inset-0 opacity-20" />
+        <div className="absolute inset-y-0 right-0 w-full md:w-1/2 bg-[radial-gradient(circle_at_70%_38%,var(--tw-gradient-stops))] from-[var(--hero-secondary)]/10 via-transparent to-transparent" />
       </div>
-      <div className="relative mx-auto grid min-h-[420px] max-w-7xl gap-10 px-5 pb-12 pt-24 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:px-10">
-        <div className="flex flex-col justify-end text-white">
-          <div className="max-w-4xl">
+      
+      <div className="relative mx-auto grid min-h-[480px] max-w-7xl gap-10 px-5 pb-16 pt-28 sm:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:px-10">
+        <div className="flex flex-col justify-center text-white">
+          <div className="max-w-3xl reveal is-visible">
             {eyebrow ? (
-              <p className="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[var(--hero-accent)]">
-                {eyebrow}
-              </p>
+              <div className="mb-6 inline-flex items-center gap-3">
+                <span className="h-px w-8 bg-[var(--hero-accent)]" />
+                <p className="text-xs font-bold uppercase tracking-[0.24em] text-[var(--hero-accent)]">
+                  {eyebrow}
+                </p>
+              </div>
             ) : null}
-            <h1 className="text-balance text-4xl font-semibold tracking-tight sm:text-6xl">
+            <h1 className="font-display text-balance text-5xl font-bold tracking-tight sm:text-7xl">
               {title}
             </h1>
             {summary ? (
-              <p className="microcopy mt-6 max-w-3xl text-lg leading-8 text-white/82">{summary}</p>
+              <p className="microcopy mt-8 max-w-2xl text-lg leading-relaxed text-slate-300">
+                {summary}
+              </p>
             ) : null}
           </div>
         </div>
-        <div className="hidden items-end justify-end lg:flex">
-          <div className="signal-surface w-full max-w-md rounded-lg border border-white/16 bg-white/10 p-5 shadow-[0_30px_100px_rgba(0,0,0,0.28)] backdrop-blur-xl">
-            {children ?? (
-              <div className="grid gap-4">
-                <div className="h-2 w-24 rounded-full bg-[var(--hero-accent)]" />
-                <div className="grid gap-2">
-                  <div className="h-12 rounded-md border border-white/14 bg-white/10" />
-                  <div className="h-12 rounded-md border border-white/14 bg-white/10" />
-                  <div className="h-12 rounded-md border border-white/14 bg-white/10" />
+        
+        <div className="hidden items-center justify-end lg:flex reveal is-visible" style={{ animationDelay: "200ms" }}>
+          <div className="glass-panel w-full max-w-md rounded-2xl p-6 relative overflow-hidden">
+            <div className="absolute -left-32 -top-32 h-64 w-64 rounded-full bg-[var(--hero-accent)] opacity-20 blur-3xl" />
+            <div className="relative z-10">
+              {children ?? (
+                <div className="grid gap-5">
+                  <div className="h-1.5 w-20 rounded-full bg-[var(--hero-accent)] shadow-[0_0_12px_var(--hero-accent)]" />
+                  <div className="grid gap-3">
+                    <div className="h-14 rounded-xl border border-white/5 bg-white/5" />
+                    <div className="h-14 rounded-xl border border-white/5 bg-white/5" />
+                    <div className="h-14 rounded-xl border border-white/5 bg-white/5 opacity-50" />
+                  </div>
                 </div>
-              </div>
-            )}
+              )}
+            </div>
           </div>
         </div>
       </div>

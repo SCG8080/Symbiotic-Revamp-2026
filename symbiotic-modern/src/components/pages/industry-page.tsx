@@ -7,58 +7,60 @@ import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 
 const industryAccents = [
-  { accent: "#26a8e0", deep: "#0c3345", icon: BriefcaseBusiness, label: "Capital agility" },
-  { accent: "#47b549", deep: "#173a2a", icon: HeartPulse, label: "Care continuity" },
-  { accent: "#d5b45f", deep: "#3b2d16", icon: Truck, label: "Flow visibility" },
-  { accent: "#7b3454", deep: "#321827", icon: Scale, label: "Trusted access" },
+  { accent: "#3b82f6", deep: "#0a1322", icon: BriefcaseBusiness, label: "Capital agility" }, // blue
+  { accent: "#22c55e", deep: "#0a1322", icon: HeartPulse, label: "Care continuity" }, // green
+  { accent: "#eab308", deep: "#0a1322", icon: Truck, label: "Flow visibility" }, // yellow
+  { accent: "#f43f5e", deep: "#0a1322", icon: Scale, label: "Trusted access" }, // rose
 ];
 
 export function IndustryPage() {
   return (
     <>
-      <PageHero title={industryPage.title} eyebrow="Industry Solutions" summary={industryPage.intro} image={industryPage.image} accent="#d5b45f" secondaryAccent="#26a8e0">
+      <PageHero title={industryPage.title} eyebrow="Industry Solutions" summary={industryPage.intro} image={industryPage.image} accent="#eab308" secondaryAccent="#3b82f6">
         <div className="grid gap-3">
           {industryAccents.map((item, index) => {
             const Icon = item.icon;
             return (
-              <div key={item.label} className="flex items-center gap-3 rounded-md border border-white/12 bg-white/10 p-3">
-                <span className="grid h-9 w-9 place-items-center rounded-md" style={{ backgroundColor: `${item.accent}24`, color: item.accent }}>
-                  <Icon className="h-4 w-4" />
+              <div key={item.label} className="group flex items-center gap-4 rounded-xl border border-white/5 bg-white/5 p-4 transition-colors hover:bg-white/10 hover:border-teal/30">
+                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-lg transition-transform group-hover:scale-110" style={{ backgroundColor: `${item.accent}20`, color: item.accent }}>
+                  <Icon className="h-5 w-5" />
                 </span>
-                <span className="text-sm font-semibold text-white/82">{industries[index].title}</span>
+                <span className="text-sm font-semibold tracking-wide text-slate-300 group-hover:text-white transition-colors">{industries[index].title}</span>
               </div>
             );
           })}
         </div>
       </PageHero>
-      <section className="bg-[#f6f8f5] px-5 py-20 sm:px-8 lg:px-10">
-        <div className="mx-auto max-w-7xl">
+      <section className="bg-obsidian-light px-5 py-32 sm:px-8 lg:px-10 relative overflow-hidden">
+        <div className="kinetic-grid absolute inset-0 opacity-10" />
+        <div className="relative mx-auto max-w-7xl">
           <Reveal>
-            <SectionHeading eyebrow="Vertical Depth" title="Distinct operating realities. One SCG delivery model." align="center" />
+            <SectionHeading eyebrow="Vertical Depth" title="Distinct operating realities. One SCG delivery model." align="center" inverse />
           </Reveal>
-          <div className="mt-12 grid gap-6">
+          <div className="mt-20 grid gap-12">
             {industries.map((industry, index) => {
               const meta = industryAccents[index];
               const Icon = meta.icon;
               return (
                 <Reveal key={industry.title} delay={index * 90}>
                   <article
-                    className="grid overflow-hidden rounded-lg border border-[#102c35]/10 bg-white shadow-[0_24px_80px_rgba(16,44,53,0.09)] lg:grid-cols-[0.8fr_1.2fr]"
+                    className="glass-panel group overflow-hidden rounded-3xl transition-all duration-500 hover:-translate-y-2 lg:grid-cols-[0.8fr_1.2fr] grid items-center"
                     style={{ "--industry-accent": meta.accent, "--industry-deep": meta.deep } as CSSProperties}
                   >
-                    <div className={`relative min-h-[330px] ${index % 2 === 1 ? "lg:order-2" : ""}`}>
-                      <Image src={industry.image} alt="" fill sizes="(min-width:1024px) 40vw, 100vw" className="object-cover" />
-                      <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent,rgba(16,44,53,0.82))]" />
-                      <div className="absolute bottom-5 left-5 right-5 text-white">
-                        <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: meta.accent }}>{meta.label}</p>
-                        <h2 className="mt-3 text-3xl font-semibold tracking-tight">{industry.title}</h2>
+                    <div className={`relative min-h-[400px] h-full ${index % 2 === 1 ? "lg:order-2" : ""}`}>
+                      <Image src={industry.image} alt="" fill sizes="(min-width:1024px) 40vw, 100vw" className="object-cover opacity-60 mix-blend-luminosity transition duration-700 group-hover:scale-110 group-hover:opacity-90" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/40 to-transparent" />
+                      <div className="absolute bottom-8 left-8 right-8 text-white">
+                        <p className="text-xs font-bold uppercase tracking-[0.24em]" style={{ color: meta.accent }}>{meta.label}</p>
+                        <h2 className="mt-4 font-display text-4xl font-bold tracking-tight">{industry.title}</h2>
                       </div>
                     </div>
-                    <div className="p-6 sm:p-8">
-                      <span className="grid h-12 w-12 place-items-center rounded-lg text-white" style={{ backgroundColor: meta.deep }}>
-                        <Icon className="h-5 w-5" />
+                    <div className="p-10 sm:p-12 relative overflow-hidden">
+                      <div className="absolute -top-32 -right-32 h-64 w-64 rounded-full opacity-5 blur-3xl transition-opacity duration-500 group-hover:opacity-10" style={{ backgroundColor: meta.accent }} />
+                      <span className="grid h-16 w-16 place-items-center rounded-2xl text-white shadow-lg relative z-10" style={{ backgroundColor: meta.deep, border: `1px solid ${meta.accent}40` }}>
+                        <Icon className="h-8 w-8" style={{ color: meta.accent }} />
                       </span>
-                      <p className="microcopy mt-6 text-base leading-8 text-[#5d6c70]">{industry.text}</p>
+                      <p className="microcopy mt-8 text-lg leading-relaxed text-slate-300 relative z-10">{industry.text}</p>
                     </div>
                   </article>
                 </Reveal>
