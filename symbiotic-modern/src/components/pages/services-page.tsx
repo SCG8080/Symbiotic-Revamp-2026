@@ -208,7 +208,40 @@ export function ServicesPage() {
           <Reveal delay={90}>
             <ServiceCommandMap items={practiceItems} />
           </Reveal>
-          <div className="mt-24 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+          
+          <Reveal delay={120}>
+            <div className="mt-32 rounded-3xl border border-white/5 bg-white/[0.02] p-8 sm:p-12 lg:p-16 relative overflow-hidden glass-panel-heavy">
+              <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-scg-teal opacity-[0.03] blur-[120px] rounded-full pointer-events-none" />
+              <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-scg-blue opacity-[0.03] blur-[100px] rounded-full pointer-events-none" />
+              
+              <div className="relative z-10 max-w-3xl">
+                <p className="text-sm font-bold uppercase tracking-[0.2em] text-scg-teal">End-to-End Delivery</p>
+                <h2 className="mt-4 font-display text-4xl font-bold tracking-tight text-white sm:text-5xl">Full Lifecycle Support.</h2>
+                <p className="mt-6 text-lg leading-relaxed text-slate-300">
+                  We don't just write code or drop in resources. Symbiotic Consulting Group provides comprehensive, end-to-end support spanning the entire technology lifecycle. From initial requirements discussion to final delivery and ongoing maintenance, our nervous system of services ensures nothing falls through the cracks.
+                </p>
+              </div>
+
+              <div className="relative z-10 mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                {[
+                  { title: "01 / Requirements", desc: "Deep discussions to uncover true business needs, technical constraints, and strategic goals." },
+                  { title: "02 / Architecture", desc: "Designing resilient systems, mapping data flows, and selecting the right technology stack." },
+                  { title: "03 / Development", desc: "Agile execution with continuous integration, testing, and transparent progress tracking." },
+                  { title: "04 / Delivery & Support", desc: "Smooth deployment followed by 24/5 offshore support, maintenance, and ongoing optimization." }
+                ].map((step, i) => (
+                  <div key={step.title} className="relative rounded-2xl border border-white/10 bg-white/5 p-6 transition-all hover:bg-white/10 hover:border-scg-teal/30 group">
+                    <div className="absolute -top-3 -left-3 h-6 w-6 rounded-full bg-obsidian border border-scg-teal/50 flex items-center justify-center">
+                      <div className="h-2 w-2 rounded-full bg-scg-teal shadow-[0_0_8px_#00A899]" />
+                    </div>
+                    <h3 className="font-display text-lg font-bold text-white group-hover:text-scg-teal transition-colors">{step.title}</h3>
+                    <p className="mt-3 text-sm leading-relaxed text-slate-400">{step.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </Reveal>
+
+          <div className="mt-32 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
             {services.map((service, index) => (
               <Reveal key={service.slug} delay={index * 70}>
                 <ServiceCard service={service} />
