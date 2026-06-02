@@ -78,26 +78,29 @@ export function HomePage() {
             </Reveal>
             
             <Reveal delay={200}>
-              <div className="relative group perspective-1000 w-full hidden lg:flex flex-col items-end justify-center min-h-0 h-full max-h-[65vh]">
-                {/* Massive ambient glow that changes color and expands on hover */}
-                <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[80%] h-[80%] rounded-2xl bg-gradient-to-tr from-scg-teal via-scg-blue to-scg-green opacity-20 blur-[80px] transition-all duration-700 group-hover:opacity-70 group-hover:blur-[120px] group-hover:scale-110 pointer-events-none" />
-                
-                {/* Image container scales to max height available without cropping */}
-                <div className="relative z-10 h-full w-auto max-w-full rounded-3xl border border-white/10 bg-obsidian-light/50 p-1.5 xl:p-2 backdrop-blur-sm shadow-2xl transition-all duration-700 group-hover:-translate-y-4 group-hover:border-scg-teal/50 group-hover:shadow-[0_40px_80px_rgba(0,168,153,0.3)] inline-flex items-center justify-center min-h-0 overflow-hidden ml-auto">
-                  <div className="relative h-full w-auto rounded-2xl overflow-hidden flex items-center justify-center">
-                    <Image 
-                      src="/Images/SCG-Banner.jpeg" 
-                      alt="SCG Technology Framework" 
-                      width={1200}
-                      height={800}
-                      className="w-auto h-full max-h-[60vh] object-contain opacity-90 mix-blend-screen transition-all duration-700 group-hover:opacity-100 group-hover:scale-105 group-hover:mix-blend-normal" 
-                      priority
-                    />
-                  </div>
+              <div className="relative perspective-1000 w-full hidden lg:flex flex-col items-end justify-center min-h-0 h-full max-h-[65vh]">
+                {/* Tight wrapper that acts as the hover group */}
+                <div className="relative group inline-flex items-center justify-center h-full max-w-full min-h-0 ml-auto">
+                  {/* Massive ambient glow that changes color and expands on hover */}
+                  <div className="absolute inset-0 w-full h-full rounded-2xl bg-gradient-to-tr from-scg-teal via-scg-blue to-scg-green opacity-20 blur-[80px] transition-all duration-700 group-hover:opacity-70 group-hover:blur-[120px] group-hover:scale-110 pointer-events-none" />
                   
-                  {/* Overlay particle/light effects on the image itself */}
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-obsidian/80 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity duration-700 pointer-events-none" />
-                  <div className="absolute inset-0 rounded-2xl bg-[radial-gradient(circle_at_var(--x,_50%)_var(--y,_50%),_rgba(255,255,255,0.2)_0%,_transparent_50%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                  {/* Image container scales to max height available without cropping */}
+                  <div className="relative z-10 h-full w-auto max-w-full rounded-3xl border border-white/10 bg-obsidian-light/50 p-1.5 xl:p-2 backdrop-blur-sm shadow-2xl transition-all duration-700 group-hover:-translate-y-4 group-hover:border-scg-teal/50 group-hover:shadow-[0_40px_80px_rgba(0,168,153,0.3)] inline-flex items-center justify-center min-h-0 overflow-hidden">
+                    <div className="relative h-full w-auto rounded-2xl overflow-hidden flex items-center justify-center">
+                      <Image 
+                        src="/Images/SCG-Banner.jpeg" 
+                        alt="SCG Technology Framework" 
+                        width={1200}
+                        height={800}
+                        className="w-auto h-full max-h-[60vh] object-contain opacity-90 mix-blend-screen transition-all duration-700 group-hover:opacity-100 group-hover:scale-105 group-hover:mix-blend-normal" 
+                        priority
+                      />
+                    </div>
+                    
+                    {/* Overlay particle/light effects on the image itself */}
+                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-obsidian/80 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity duration-700 pointer-events-none" />
+                    <div className="absolute inset-0 rounded-2xl bg-[radial-gradient(circle_at_var(--x,_50%)_var(--y,_50%),_rgba(255,255,255,0.2)_0%,_transparent_50%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                  </div>
                 </div>
               </div>
             </Reveal>
