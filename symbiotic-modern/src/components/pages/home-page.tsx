@@ -46,25 +46,25 @@ export function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-b from-obsidian/40 via-obsidian/80 to-obsidian" />
         <AIBackground />
         
-        <div className="relative mx-auto grid h-[calc(100svh-80px)] max-w-7xl lg:grid-cols-2 items-center gap-8 px-5 py-12 lg:py-16 xl:py-24 sm:px-8 lg:px-10">
+        <div className="relative mx-auto grid h-[calc(100svh-80px)] max-w-7xl lg:grid-cols-2 items-center gap-6 px-5 py-8 lg:py-10 xl:py-20 sm:px-8 lg:px-10">
           <Reveal>
             <div className="text-left">
-              <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-scg-blue/30 bg-scg-blue/10 px-5 py-2 backdrop-blur-md">
-                <span className="h-2 w-2 rounded-full bg-scg-green animate-pulse" />
-                <p className="text-xs font-bold uppercase tracking-[0.2em] text-scg-teal">
+              <div className="mb-4 xl:mb-6 inline-flex items-center gap-2 xl:gap-3 rounded-full border border-scg-blue/30 bg-scg-blue/10 px-4 xl:px-5 py-1.5 xl:py-2 backdrop-blur-md">
+                <span className="h-1.5 xl:h-2 w-1.5 xl:w-2 rounded-full bg-scg-green animate-pulse" />
+                <p className="text-[10px] xl:text-xs font-bold uppercase tracking-[0.2em] text-scg-teal">
                   Fully AI-Enabled Technology Consulting
                 </p>
               </div>
-              <h1 className="font-display max-w-5xl text-balance text-4xl sm:text-5xl lg:text-5xl xl:text-7xl font-bold tracking-tight lg:leading-[1.1]">
+              <h1 className="font-display max-w-5xl text-balance text-4xl lg:text-4xl xl:text-6xl font-bold tracking-tight leading-tight xl:leading-[1.1]">
                 Architecting <br/>
-                <span className="text-gradient-brand block mt-2 xl:mt-4">
+                <span className="text-gradient-brand block mt-1 xl:mt-3">
                   <TypewriterText phrases={["Intelligent Delivery", "AI-Driven Development", "Next-Gen Automation"]} />
                 </span>
               </h1>
-              <p className="microcopy mt-6 xl:mt-8 max-w-2xl text-base lg:text-lg xl:text-xl leading-relaxed text-slate-300">
+              <p className="microcopy mt-4 xl:mt-6 max-w-2xl text-sm lg:text-base xl:text-xl leading-relaxed text-slate-300">
                 Accelerate your development, optimize your infrastructure, and scale your workforce with SCG's AI-driven delivery models.
               </p>
-              <div className="mt-8 xl:mt-10 flex flex-wrap gap-4">
+              <div className="mt-6 xl:mt-10 flex flex-wrap gap-3 xl:gap-4">
                 <ButtonLink href="/services" variant="primary">
                   Explore Services
                 </ButtonLink>
@@ -76,7 +76,7 @@ export function HomePage() {
           </Reveal>
           
           <Reveal delay={200}>
-            <div className="relative group perspective-1000 w-full max-w-lg mx-auto lg:max-w-sm xl:max-w-lg hidden lg:block lg:ml-auto">
+            <div className="relative group perspective-1000 w-full max-w-sm mx-auto lg:max-w-xs xl:max-w-md hidden lg:block lg:ml-auto">
               {/* Massive ambient glow that changes color and expands on hover */}
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-scg-teal via-scg-blue to-scg-green opacity-20 blur-[80px] transition-all duration-700 group-hover:opacity-70 group-hover:blur-[120px] group-hover:scale-110 pointer-events-none" />
               
@@ -100,14 +100,14 @@ export function HomePage() {
         </div>
 
         {/* Scroll down indicator for next section */}
-        <div className="absolute right-6 lg:right-10 bottom-24 xl:bottom-28 z-20 hidden lg:flex flex-col items-center justify-center opacity-80 hover:opacity-100 transition-opacity cursor-pointer">
+        <Link href="#stats" className="absolute right-6 lg:right-10 bottom-24 xl:bottom-28 z-20 hidden lg:flex flex-col items-center justify-center opacity-80 hover:opacity-100 transition-opacity cursor-pointer">
           <div className="animate-bounce flex flex-col items-center">
             <span className="text-[10px] font-bold tracking-[0.2em] text-scg-teal mb-2 rotate-180" style={{ writingMode: 'vertical-rl' }}>SCROLL</span>
-            <div className="flex h-10 w-10 items-center justify-center rounded-full border border-scg-teal/30 bg-scg-teal/10 backdrop-blur-sm">
+            <div className="flex h-10 w-10 items-center justify-center rounded-full border border-scg-teal/30 bg-scg-teal/10 backdrop-blur-sm hover:bg-scg-teal/20 transition-colors">
               <ArrowDown className="h-5 w-5 text-scg-teal" />
             </div>
           </div>
-        </div>
+        </Link>
 
         {/* Integrated Marquee at bottom of Hero */}
         <div className="absolute bottom-0 left-0 right-0 overflow-hidden border-t border-white/10 bg-obsidian/40 backdrop-blur-md py-4">
@@ -127,7 +127,7 @@ export function HomePage() {
       </section>
 
       {/* Stats Section */}
-      <section className="bg-obsidian px-5 py-24 sm:px-8 lg:px-10 relative border-b border-white/5">
+      <section id="stats" className="bg-obsidian px-5 py-24 sm:px-8 lg:px-10 relative border-b border-white/5">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-scg-blue/10 via-obsidian to-obsidian opacity-60" />
         <div className="relative mx-auto grid max-w-7xl gap-6 sm:grid-cols-3">
           {stats.map(([value, label], index) => (
