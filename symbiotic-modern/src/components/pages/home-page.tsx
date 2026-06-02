@@ -41,83 +41,86 @@ export function HomePage() {
 
   return (
     <>
-      <section className="relative isolate overflow-hidden bg-obsidian text-white border-b border-white/5">
+      <section className="relative isolate overflow-hidden bg-obsidian text-white border-b border-white/5 h-[calc(100svh-80px)] flex flex-col">
         <Image src={hero.image} alt="" fill priority sizes="100vw" className="hero-mask object-cover opacity-20 mix-blend-luminosity" />
         <div className="absolute inset-0 bg-gradient-to-b from-obsidian/40 via-obsidian/80 to-obsidian" />
         <AIBackground />
         
-        <div className="relative mx-auto grid h-[calc(100svh-80px)] max-w-7xl lg:grid-cols-2 items-center gap-6 px-5 py-8 lg:py-10 xl:py-20 sm:px-8 lg:px-10">
-          <Reveal>
-            <div className="text-left">
-              <div className="mb-4 xl:mb-6 inline-flex items-center gap-2 xl:gap-3 rounded-full border border-scg-blue/30 bg-scg-blue/10 px-4 xl:px-5 py-1.5 xl:py-2 backdrop-blur-md">
-                <span className="h-1.5 xl:h-2 w-1.5 xl:w-2 rounded-full bg-scg-green animate-pulse" />
-                <p className="text-[10px] xl:text-xs font-bold uppercase tracking-[0.2em] text-scg-teal">
-                  Fully AI-Enabled Technology Consulting
+        {/* Main Content Area - dynamically takes available height */}
+        <div className="relative flex-1 w-full flex items-center justify-center py-4 lg:py-0">
+          <div className="w-full mx-auto grid max-w-7xl lg:grid-cols-2 items-center gap-6 lg:gap-4 xl:gap-12 px-5 sm:px-8 lg:px-10">
+            <Reveal>
+              <div className="text-left">
+                <div className="mb-3 lg:mb-4 xl:mb-6 inline-flex items-center gap-2 xl:gap-3 rounded-full border border-scg-blue/30 bg-scg-blue/10 px-3 xl:px-5 py-1 xl:py-2 backdrop-blur-md">
+                  <span className="h-1.5 xl:h-2 w-1.5 xl:w-2 rounded-full bg-scg-green animate-pulse" />
+                  <p className="text-[9px] lg:text-[10px] xl:text-xs font-bold uppercase tracking-[0.2em] text-scg-teal">
+                    Fully AI-Enabled Technology Consulting
+                  </p>
+                </div>
+                <h1 className="font-display max-w-5xl text-balance text-4xl lg:text-3xl xl:text-6xl 2xl:text-7xl font-bold tracking-tight leading-tight xl:leading-[1.1]">
+                  Architecting <br/>
+                  <span className="text-gradient-brand block mt-1 xl:mt-3">
+                    <TypewriterText phrases={["Intelligent Delivery", "AI-Driven Development", "Next-Gen Automation"]} />
+                  </span>
+                </h1>
+                <p className="microcopy mt-3 lg:mt-4 xl:mt-6 max-w-2xl text-sm lg:text-xs xl:text-lg 2xl:text-xl leading-relaxed text-slate-300">
+                  Accelerate your development, optimize your infrastructure, and scale your workforce with SCG's AI-driven delivery models.
                 </p>
+                <div className="mt-4 lg:mt-6 xl:mt-10 flex flex-wrap gap-2 lg:gap-3 xl:gap-4">
+                  <ButtonLink href="/services" variant="primary" className="text-xs xl:text-sm px-4 xl:px-6 py-2 xl:py-3">
+                    Explore Services
+                  </ButtonLink>
+                  <ButtonLink href="/contact" variant="secondary" className="text-xs xl:text-sm px-4 xl:px-6 py-2 xl:py-3">
+                    Partner with us
+                  </ButtonLink>
+                </div>
               </div>
-              <h1 className="font-display max-w-5xl text-balance text-4xl lg:text-4xl xl:text-6xl font-bold tracking-tight leading-tight xl:leading-[1.1]">
-                Architecting <br/>
-                <span className="text-gradient-brand block mt-1 xl:mt-3">
-                  <TypewriterText phrases={["Intelligent Delivery", "AI-Driven Development", "Next-Gen Automation"]} />
-                </span>
-              </h1>
-              <p className="microcopy mt-4 xl:mt-6 max-w-2xl text-sm lg:text-base xl:text-xl leading-relaxed text-slate-300">
-                Accelerate your development, optimize your infrastructure, and scale your workforce with SCG's AI-driven delivery models.
-              </p>
-              <div className="mt-6 xl:mt-10 flex flex-wrap gap-3 xl:gap-4">
-                <ButtonLink href="/services" variant="primary">
-                  Explore Services
-                </ButtonLink>
-                <ButtonLink href="/contact" variant="secondary">
-                  Partner with us
-                </ButtonLink>
-              </div>
-            </div>
-          </Reveal>
-          
-          <Reveal delay={200}>
-            <div className="relative group perspective-1000 w-full max-w-sm mx-auto lg:max-w-xs xl:max-w-md hidden lg:block lg:ml-auto">
-              {/* Massive ambient glow that changes color and expands on hover */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-scg-teal via-scg-blue to-scg-green opacity-20 blur-[80px] transition-all duration-700 group-hover:opacity-70 group-hover:blur-[120px] group-hover:scale-110 pointer-events-none" />
-              
-              {/* Image container with 3D tilt effect on hover */}
-              <div className="relative z-10 overflow-hidden rounded-3xl border border-white/10 bg-obsidian-light/50 p-2 backdrop-blur-sm shadow-2xl transition-all duration-700 group-hover:-translate-y-4 group-hover:border-scg-teal/50 group-hover:shadow-[0_40px_80px_rgba(0,168,153,0.3)]">
-                <Image 
-                  src="/Images/SCG-Banner.jpeg" 
-                  alt="SCG Technology Framework" 
-                  width={800} 
-                  height={600} 
-                  className="rounded-2xl object-cover opacity-90 mix-blend-screen transition-all duration-700 group-hover:opacity-100 group-hover:scale-105 group-hover:mix-blend-normal" 
-                  priority
-                />
+            </Reveal>
+            
+            <Reveal delay={200}>
+              <div className="relative group perspective-1000 w-full max-w-sm mx-auto lg:max-w-[260px] xl:max-w-md hidden lg:block lg:ml-auto">
+                {/* Massive ambient glow that changes color and expands on hover */}
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-scg-teal via-scg-blue to-scg-green opacity-20 blur-[80px] transition-all duration-700 group-hover:opacity-70 group-hover:blur-[120px] group-hover:scale-110 pointer-events-none" />
                 
-                {/* Overlay particle/light effects on the image itself */}
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-obsidian/80 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity duration-700 pointer-events-none" />
-                <div className="absolute inset-0 rounded-2xl bg-[radial-gradient(circle_at_var(--x,_50%)_var(--y,_50%),_rgba(255,255,255,0.2)_0%,_transparent_50%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                {/* Image container with 3D tilt effect on hover */}
+                <div className="relative z-10 overflow-hidden rounded-3xl border border-white/10 bg-obsidian-light/50 p-1.5 xl:p-2 backdrop-blur-sm shadow-2xl transition-all duration-700 group-hover:-translate-y-4 group-hover:border-scg-teal/50 group-hover:shadow-[0_40px_80px_rgba(0,168,153,0.3)]">
+                  <Image 
+                    src="/Images/SCG-Banner.jpeg" 
+                    alt="SCG Technology Framework" 
+                    width={800} 
+                    height={600} 
+                    className="rounded-2xl object-cover opacity-90 mix-blend-screen transition-all duration-700 group-hover:opacity-100 group-hover:scale-105 group-hover:mix-blend-normal" 
+                    priority
+                  />
+                  
+                  {/* Overlay particle/light effects on the image itself */}
+                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-obsidian/80 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity duration-700 pointer-events-none" />
+                  <div className="absolute inset-0 rounded-2xl bg-[radial-gradient(circle_at_var(--x,_50%)_var(--y,_50%),_rgba(255,255,255,0.2)_0%,_transparent_50%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                </div>
               </div>
-            </div>
-          </Reveal>
+            </Reveal>
+          </div>
         </div>
 
         {/* Scroll down indicator for next section */}
         <Link href="#stats" className="absolute right-6 lg:right-10 bottom-24 xl:bottom-28 z-20 hidden lg:flex flex-col items-center justify-center opacity-80 hover:opacity-100 transition-opacity cursor-pointer">
           <div className="animate-bounce flex flex-col items-center">
-            <span className="text-[10px] font-bold tracking-[0.2em] text-scg-teal mb-2 rotate-180" style={{ writingMode: 'vertical-rl' }}>SCROLL</span>
-            <div className="flex h-10 w-10 items-center justify-center rounded-full border border-scg-teal/30 bg-scg-teal/10 backdrop-blur-sm hover:bg-scg-teal/20 transition-colors">
-              <ArrowDown className="h-5 w-5 text-scg-teal" />
+            <span className="text-[9px] xl:text-[10px] font-bold tracking-[0.2em] text-scg-teal mb-2 rotate-180" style={{ writingMode: 'vertical-rl' }}>SCROLL</span>
+            <div className="flex h-8 w-8 xl:h-10 xl:w-10 items-center justify-center rounded-full border border-scg-teal/30 bg-scg-teal/10 backdrop-blur-sm hover:bg-scg-teal/20 transition-colors">
+              <ArrowDown className="h-4 w-4 xl:h-5 xl:w-5 text-scg-teal" />
             </div>
           </div>
         </Link>
 
-        {/* Integrated Marquee at bottom of Hero */}
-        <div className="absolute bottom-0 left-0 right-0 overflow-hidden border-t border-white/10 bg-obsidian/40 backdrop-blur-md py-4">
+        {/* Integrated Marquee at bottom of Hero - No longer absolute, takes natural height */}
+        <div className="relative w-full overflow-hidden border-t border-white/10 bg-obsidian/40 backdrop-blur-md py-3 xl:py-4 shrink-0">
           <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-obsidian to-transparent z-10" />
           <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-obsidian to-transparent z-10" />
-          <div className="marquee-track flex w-max gap-6">
+          <div className="marquee-track flex w-max gap-4 xl:gap-6">
             {[...marqueeItems, ...marqueeItems].map((item, index) => (
               <span
                 key={`${item}-${index}`}
-                className="glass-panel-premium inline-flex h-12 items-center rounded-xl px-6 font-display text-sm font-bold tracking-wider text-white shadow-lg transition-transform hover:scale-105"
+                className="glass-panel-premium inline-flex h-10 xl:h-12 items-center rounded-xl px-4 xl:px-6 font-display text-xs xl:text-sm font-bold tracking-wider text-white shadow-lg transition-transform hover:scale-105"
               >
                 {item}
               </span>
