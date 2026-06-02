@@ -45,7 +45,7 @@ export function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-b from-obsidian/40 via-obsidian/80 to-obsidian" />
         <AIBackground />
         
-        <div className="relative mx-auto grid min-h-[calc(100svh-80px)] max-w-7xl lg:grid-cols-2 items-center gap-12 px-5 py-24 sm:px-8 lg:px-10">
+        <div className="relative mx-auto grid h-[calc(100svh-80px)] max-w-7xl lg:grid-cols-2 items-center gap-8 px-5 py-12 lg:py-16 xl:py-24 sm:px-8 lg:px-10">
           <Reveal>
             <div className="text-left">
               <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-scg-blue/30 bg-scg-blue/10 px-5 py-2 backdrop-blur-md">
