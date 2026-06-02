@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
+  ArrowDown,
   ArrowRight,
   CheckCircle2,
   Handshake,
@@ -54,16 +55,16 @@ export function HomePage() {
                   Fully AI-Enabled Technology Consulting
                 </p>
               </div>
-              <h1 className="font-display max-w-5xl text-balance text-5xl font-bold tracking-tight sm:text-6xl lg:text-7xl lg:leading-[1.1]">
+              <h1 className="font-display max-w-5xl text-balance text-4xl sm:text-5xl lg:text-5xl xl:text-7xl font-bold tracking-tight lg:leading-[1.1]">
                 Architecting <br/>
-                <span className="text-gradient-brand block mt-2">
+                <span className="text-gradient-brand block mt-2 xl:mt-4">
                   <TypewriterText phrases={["Intelligent Delivery", "AI-Driven Development", "Next-Gen Automation"]} />
                 </span>
               </h1>
-              <p className="microcopy mt-8 max-w-2xl text-xl leading-relaxed text-slate-300">
+              <p className="microcopy mt-6 xl:mt-8 max-w-2xl text-base lg:text-lg xl:text-xl leading-relaxed text-slate-300">
                 Accelerate your development, optimize your infrastructure, and scale your workforce with SCG's AI-driven delivery models.
               </p>
-              <div className="mt-10 flex flex-wrap gap-4">
+              <div className="mt-8 xl:mt-10 flex flex-wrap gap-4">
                 <ButtonLink href="/services" variant="primary">
                   Explore Services
                 </ButtonLink>
@@ -75,7 +76,7 @@ export function HomePage() {
           </Reveal>
           
           <Reveal delay={200}>
-            <div className="relative group perspective-1000 w-full max-w-lg mx-auto lg:max-w-none hidden lg:block">
+            <div className="relative group perspective-1000 w-full max-w-lg mx-auto lg:max-w-sm xl:max-w-lg hidden lg:block lg:ml-auto">
               {/* Massive ambient glow that changes color and expands on hover */}
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-scg-teal via-scg-blue to-scg-green opacity-20 blur-[80px] transition-all duration-700 group-hover:opacity-70 group-hover:blur-[120px] group-hover:scale-110 pointer-events-none" />
               
@@ -96,6 +97,16 @@ export function HomePage() {
               </div>
             </div>
           </Reveal>
+        </div>
+
+        {/* Scroll down indicator for next section */}
+        <div className="absolute right-6 lg:right-10 bottom-24 xl:bottom-28 z-20 hidden lg:flex flex-col items-center justify-center opacity-80 hover:opacity-100 transition-opacity cursor-pointer">
+          <div className="animate-bounce flex flex-col items-center">
+            <span className="text-[10px] font-bold tracking-[0.2em] text-scg-teal mb-2 rotate-180" style={{ writingMode: 'vertical-rl' }}>SCROLL</span>
+            <div className="flex h-10 w-10 items-center justify-center rounded-full border border-scg-teal/30 bg-scg-teal/10 backdrop-blur-sm">
+              <ArrowDown className="h-5 w-5 text-scg-teal" />
+            </div>
+          </div>
         </div>
 
         {/* Integrated Marquee at bottom of Hero */}
