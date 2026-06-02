@@ -12,11 +12,11 @@ type ButtonLinkProps = {
 
 const variants = {
   primary:
-    "bg-[#00a899] text-white shadow-[0_18px_40px_rgba(0,168,153,0.28)] hover:bg-[#078f86]",
+    "bg-[#00a899] text-white shadow-[0_18px_46px_rgba(0,168,153,0.28)] hover:-translate-y-0.5 hover:bg-[#078f86] hover:shadow-[0_24px_60px_rgba(0,168,153,0.34)]",
   secondary:
-    "border border-[#0d2f3a]/15 bg-white text-[#102c35] hover:border-[#00a899]/50 hover:bg-[#f4fbfa]",
+    "border border-[#0d2f3a]/15 bg-white text-[#102c35] hover:-translate-y-0.5 hover:border-[#00a899]/50 hover:bg-[#f4fbfa]",
   light:
-    "border border-white/30 bg-white/12 text-white backdrop-blur-md hover:bg-white hover:text-[#102c35]",
+    "border border-white/30 bg-white/12 text-white backdrop-blur-md hover:-translate-y-0.5 hover:bg-white hover:text-[#102c35]",
 };
 
 export function ButtonLink({
