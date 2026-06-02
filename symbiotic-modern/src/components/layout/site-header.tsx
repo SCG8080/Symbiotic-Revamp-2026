@@ -51,10 +51,10 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-white/5 bg-obsidian/70 backdrop-blur-2xl supports-[backdrop-filter]:bg-obsidian/60">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-10">
         {/* Left Side: Logo */}
-        <div className="flex shrink-0 items-center justify-start mr-8">
+        <div className="flex shrink-0 items-center justify-start mr-4 lg:mr-8">
           <Link
             href="/"
-            className="group flex min-w-0 items-center gap-3 transition-opacity hover:opacity-80"
+            className="group flex min-w-0 items-center gap-2 xl:gap-3 transition-opacity hover:opacity-80"
             aria-label="Symbiotic Consulting Group home"
           >
             <div className="relative flex h-10 items-center justify-center">
@@ -66,10 +66,10 @@ export function SiteHeader() {
                 className="shrink-0 drop-shadow-md transition-transform group-hover:scale-105"
               />
             </div>
-            <div className="hidden flex-col items-start justify-center font-display text-xs font-bold uppercase leading-tight tracking-widest text-white 2xl:flex">
-            <span>Symbiotic</span>
-            <span className="text-scg-teal">Consulting Group</span>
-          </div>
+            <div className="hidden flex-col items-start justify-center font-display text-[9px] xl:text-xs font-bold uppercase leading-tight tracking-widest text-white lg:flex">
+              <span>Symbiotic</span>
+              <span className="text-scg-teal">Consulting Group</span>
+            </div>
           </Link>
         </div>
 
@@ -83,7 +83,7 @@ export function SiteHeader() {
                 <div className="group/nav relative">
                   <Link
                     href={item.href}
-                    className={`inline-flex h-10 items-center gap-1.5 rounded-lg px-3 text-base font-semibold tracking-wide transition-all ${
+                    className={`inline-flex h-auto min-h-[40px] py-1 text-center items-center justify-center gap-1.5 rounded-lg px-2 xl:px-3 text-sm xl:text-base font-semibold tracking-wide transition-all ${
                       active
                         ? "text-white"
                         : "text-slate-300 hover:text-white"
