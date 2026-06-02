@@ -47,8 +47,8 @@ export function HomePage() {
         <AIBackground />
         
         {/* Main Content Area - dynamically takes available height */}
-        <div className="relative flex-1 w-full flex items-center justify-center py-4 lg:py-0">
-          <div className="w-full mx-auto grid max-w-7xl lg:grid-cols-2 items-center gap-6 lg:gap-4 xl:gap-12 px-5 sm:px-8 lg:px-10">
+        <div className="relative flex-1 w-full flex items-center justify-center py-4 lg:py-0 min-h-0">
+          <div className="w-full mx-auto grid max-w-7xl lg:grid-cols-[1.1fr_0.9fr] xl:grid-cols-2 items-center gap-6 lg:gap-4 xl:gap-12 px-5 sm:px-8 lg:px-10 max-h-full">
             <Reveal>
               <div className="text-left">
                 <div className="mb-3 lg:mb-4 xl:mb-6 inline-flex items-center gap-2 xl:gap-3 rounded-full border border-scg-blue/30 bg-scg-blue/10 px-3 xl:px-5 py-1 xl:py-2 backdrop-blur-md">
@@ -78,20 +78,21 @@ export function HomePage() {
             </Reveal>
             
             <Reveal delay={200}>
-              <div className="relative group perspective-1000 w-full max-w-sm mx-auto lg:max-w-[260px] xl:max-w-md hidden lg:block lg:ml-auto">
+              <div className="relative group perspective-1000 w-full max-w-sm mx-auto lg:w-[320px] xl:w-[480px] hidden lg:block lg:ml-auto">
                 {/* Massive ambient glow that changes color and expands on hover */}
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-scg-teal via-scg-blue to-scg-green opacity-20 blur-[80px] transition-all duration-700 group-hover:opacity-70 group-hover:blur-[120px] group-hover:scale-110 pointer-events-none" />
                 
-                {/* Image container with 3D tilt effect on hover */}
-                <div className="relative z-10 overflow-hidden rounded-3xl border border-white/10 bg-obsidian-light/50 p-1.5 xl:p-2 backdrop-blur-sm shadow-2xl transition-all duration-700 group-hover:-translate-y-4 group-hover:border-scg-teal/50 group-hover:shadow-[0_40px_80px_rgba(0,168,153,0.3)]">
-                  <Image 
-                    src="/Images/SCG-Banner.jpeg" 
-                    alt="SCG Technology Framework" 
-                    width={800} 
-                    height={600} 
-                    className="rounded-2xl object-cover opacity-90 mix-blend-screen transition-all duration-700 group-hover:opacity-100 group-hover:scale-105 group-hover:mix-blend-normal" 
-                    priority
-                  />
+                {/* Image container with strict aspect ratio constraint */}
+                <div className="relative z-10 w-full aspect-[4/3] overflow-hidden rounded-3xl border border-white/10 bg-obsidian-light/50 p-1.5 xl:p-2 backdrop-blur-sm shadow-2xl transition-all duration-700 group-hover:-translate-y-4 group-hover:border-scg-teal/50 group-hover:shadow-[0_40px_80px_rgba(0,168,153,0.3)] flex items-center justify-center">
+                  <div className="relative w-full h-full rounded-2xl overflow-hidden">
+                    <Image 
+                      src="/Images/SCG-Banner.jpeg" 
+                      alt="SCG Technology Framework" 
+                      fill
+                      className="object-cover opacity-90 mix-blend-screen transition-all duration-700 group-hover:opacity-100 group-hover:scale-105 group-hover:mix-blend-normal" 
+                      priority
+                    />
+                  </div>
                   
                   {/* Overlay particle/light effects on the image itself */}
                   <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-obsidian/80 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity duration-700 pointer-events-none" />
