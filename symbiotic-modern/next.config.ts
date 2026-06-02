@@ -5,7 +5,8 @@ const nextConfig: NextConfig = {
   basePath: "/Symbiotic-Revamp-2026",
   trailingSlash: true,
   images: {
-    unoptimized: true,
+    loader: "custom",
+    loaderFile: "./src/core/image-loader.ts",
   },
   turbopack: {
     root: process.cwd(),
