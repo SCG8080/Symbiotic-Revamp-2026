@@ -3,7 +3,6 @@ import Link from "next/link";
 import {
   ArrowRight,
   CheckCircle2,
-  CircuitBoard,
   Handshake,
   Network,
   ShieldCheck,
@@ -12,6 +11,7 @@ import {
 import { homeIntro, homeSlides, valueCards } from "@/core/content/pages";
 import { services } from "@/core/content/services";
 import { ButtonLink } from "@/components/ui/button-link";
+import { AIConstellation } from "@/components/ui/ai-constellation";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 
@@ -43,7 +43,7 @@ export function HomePage() {
         <Image src={hero.image} alt="" fill priority sizes="100vw" className="hero-mask object-cover" />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,26,32,0.96),rgba(6,26,32,0.74)_54%,rgba(6,26,32,0.42))]" />
         <div className="kinetic-grid absolute inset-0 opacity-35" />
-        <div className="relative mx-auto grid min-h-[calc(100svh-145px)] max-w-7xl gap-10 px-5 py-12 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:px-10">
+        <div className="relative mx-auto grid min-h-[calc(100svh-170px)] max-w-7xl gap-8 px-5 py-8 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:px-10">
           <div className="flex flex-col justify-center">
             <Reveal>
               <p className="mb-5 text-xs font-bold uppercase tracking-[0.24em] text-[#77e0d5]">
@@ -67,32 +67,13 @@ export function HomePage() {
           </div>
 
           <Reveal delay={140} className="hidden items-center lg:flex">
-            <div className="signal-surface w-full rounded-lg border border-white/16 bg-white/10 p-5 shadow-[0_30px_110px_rgba(0,0,0,0.28)] backdrop-blur-xl">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-xs font-bold uppercase tracking-[0.22em] text-white/58">
-                    SCG mission control
-                  </p>
-                  <p className="mt-2 text-2xl font-semibold">Technology + process</p>
-                </div>
-                <CircuitBoard className="h-10 w-10 text-[#77e0d5]" aria-hidden="true" />
-              </div>
-              <div className="mt-7 grid gap-3">
-                {homeSlides.slice(1).map((slide, index) => (
-                  <div key={slide.title} className="rounded-md border border-white/12 bg-white/10 p-4">
-                    <div className="flex items-center justify-between gap-4">
-                      <p className="text-sm font-semibold">{slide.title}</p>
-                      <span className="text-xs font-bold text-[#77e0d5]">
-                        {String(index + 1).padStart(2, "0")}
-                      </span>
-                    </div>
-                    <p className="mt-2 text-xs leading-5 text-white/62">{slide.text}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <AIConstellation />
           </Reveal>
         </div>
+      </section>
+
+      <section className="bg-[#102c35] px-5 pb-8 text-white sm:px-8 lg:hidden">
+        <AIConstellation />
       </section>
 
       <section className="overflow-hidden bg-[#102c35] py-5 text-white">
@@ -210,14 +191,32 @@ export function HomePage() {
               <Reveal key={service.slug} delay={index * 55}>
                 <Link
                   href={`/services/${service.slug}`}
-                  className="group block rounded-lg border border-white/14 bg-white/10 p-5 transition hover:-translate-y-1 hover:border-[#77e0d5]/60 hover:bg-white/14"
+                  className="group signal-surface block overflow-hidden rounded-lg border border-white/14 bg-white/10 transition duration-500 hover:-translate-y-2 hover:border-[#77e0d5]/60 hover:bg-white/14"
                 >
-                  <p className="text-lg font-semibold text-white">{service.title}</p>
-                  <p className="microcopy mt-3 text-sm leading-7 text-white/72">{service.summary}</p>
-                  <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#77e0d5]">
-                    Enter practice
-                    <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
-                  </span>
+                  <div className="relative h-28 border-b border-white/10 bg-white/[0.04]">
+                    <svg className="absolute inset-0 h-full w-full" viewBox="0 0 220 96" aria-hidden="true">
+                      <path className="service-card-line" d="M 20 70 C 54 18, 86 32, 112 52 S 164 92, 202 26" />
+                      <circle className="service-card-node" cx="20" cy="70" r="5" />
+                      <circle className="service-card-node" cx="112" cy="52" r="5" />
+                      <circle className="service-card-node" cx="202" cy="26" r="5" />
+                    </svg>
+                    <div className="absolute inset-x-5 top-5 flex items-center justify-between">
+                      <span className="text-xs font-bold uppercase tracking-[0.2em] text-white/44">
+                        Practice route
+                      </span>
+                      <span className="text-xs font-bold text-[#77e0d5]">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="p-5">
+                    <p className="text-lg font-semibold text-white">{service.title}</p>
+                    <p className="microcopy mt-3 text-sm leading-7 text-white/72">{service.summary}</p>
+                    <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#77e0d5]">
+                      Enter practice
+                      <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
+                    </span>
+                  </div>
                 </Link>
               </Reveal>
             ))}

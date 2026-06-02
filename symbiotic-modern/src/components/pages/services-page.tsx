@@ -20,6 +20,7 @@ import { services, servicesPage, type Service } from "@/core/content/services";
 import { PageHero } from "@/components/ui/page-hero";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
+import { ServiceCommandMap, type PracticeMapItem } from "@/components/ui/service-command-map";
 
 type ServiceExperience = {
   accent: string;
@@ -166,6 +167,20 @@ function experienceFor(service: Service) {
 }
 
 export function ServicesPage() {
+  const practiceItems: PracticeMapItem[] = services.map((service) => {
+    const experience = experienceFor(service);
+
+    return {
+      slug: service.slug,
+      title: service.title,
+      summary: experience.cinematic,
+      accent: experience.accent,
+      secondary: experience.secondary,
+      metric: `${experience.metrics[0][0]} ${experience.metrics[0][1]}`,
+      stage: experience.stages[0],
+    };
+  });
+
   return (
     <>
       <PageHero
@@ -187,6 +202,9 @@ export function ServicesPage() {
               text="SCG aligns strategy, engineering, data, infrastructure, delivery leadership, and talent around practical business outcomes."
               align="center"
             />
+          </Reveal>
+          <Reveal delay={90}>
+            <ServiceCommandMap items={practiceItems} />
           </Reveal>
           <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
             {services.map((service, index) => (
@@ -270,6 +288,21 @@ function ServiceCard({ service }: { service: Service }) {
           style={{ color: experience.accent }}
         >
           <Icon className="h-5 w-5" />
+        </div>
+        <div className="absolute bottom-5 left-5 right-5 rounded-md border border-white/14 bg-[#071d24]/62 p-3 backdrop-blur-xl">
+          <svg className="h-16 w-full" viewBox="0 0 240 64" aria-hidden="true">
+            <path className="service-card-line" d="M 8 42 C 45 12, 82 20, 112 36 S 178 58, 232 18" />
+            <circle className="service-card-node" cx="8" cy="42" r="4.5" />
+            <circle className="service-card-node" cx="112" cy="36" r="4.5" />
+            <circle className="service-card-node" cx="232" cy="18" r="4.5" />
+          </svg>
+          <div className="mt-2 grid grid-cols-3 gap-2">
+            {experience.stages.slice(0, 3).map((stage) => (
+              <span key={stage} className="truncate text-[10px] font-bold uppercase tracking-[0.14em] text-white/62">
+                {stage}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
       <div className="p-6">

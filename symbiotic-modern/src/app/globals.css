@@ -103,6 +103,44 @@ textarea {
   }
 }
 
+@keyframes graph-dash {
+  to {
+    stroke-dashoffset: -34;
+  }
+}
+
+@keyframes node-breathe {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(119, 224, 213, 0.18);
+  }
+
+  50% {
+    box-shadow: 0 0 0 10px rgba(119, 224, 213, 0);
+  }
+}
+
+@keyframes scanline-y {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes service-node-lift {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
 .reveal {
   opacity: 0;
   transform: translate3d(0, 28px, 0) scale(0.98);
@@ -155,6 +193,88 @@ textarea {
   text-wrap: pretty;
 }
 
+.ai-scanline {
+  background: linear-gradient(180deg, transparent 0%, rgba(119, 224, 213, 0.12) 48%, transparent 100%);
+  height: 46%;
+  top: -46%;
+  animation: scanline-y 5.8s linear infinite;
+  position: absolute;
+  width: 100%;
+}
+
+.ai-graph-link,
+.service-map-link {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.2);
+  stroke-dasharray: 5 8;
+  stroke-linecap: round;
+  stroke-width: 0.75;
+  transition:
+    opacity 300ms ease,
+    stroke 300ms ease,
+    stroke-width 300ms ease;
+  animation: graph-dash 2.4s linear infinite;
+}
+
+.ai-graph-link-active,
+.service-map-link-active {
+  stroke: url("#ai-link-gradient");
+  stroke-width: 1.65;
+  opacity: 1;
+}
+
+.service-map-link-active {
+  stroke: rgba(119, 224, 213, 0.92);
+}
+
+.ai-node {
+  background:
+    radial-gradient(circle at 50% 42%, color-mix(in srgb, var(--node-accent) 82%, white 18%) 0 15%, transparent 16%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.06));
+  animation: node-breathe 3.8s ease-in-out infinite;
+}
+
+.ai-node-core {
+  position: absolute;
+  inset: 6px;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--node-accent) 58%, transparent);
+  background: rgba(7, 29, 36, 0.68);
+}
+
+.service-map-link {
+  stroke: rgba(255, 255, 255, 0.16);
+}
+
+.group:hover .service-card-node {
+  animation: service-node-lift 1.5s ease-in-out infinite;
+}
+
+.group:hover .service-card-line {
+  stroke: var(--card-accent);
+  stroke-dashoffset: -24;
+}
+
+.service-card-line {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.32);
+  stroke-dasharray: 5 7;
+  stroke-linecap: round;
+  stroke-width: 1.5;
+  transition:
+    stroke 300ms ease,
+    stroke-dashoffset 600ms ease;
+}
+
+.service-card-node {
+  fill: rgba(255, 255, 255, 0.86);
+  transition: fill 300ms ease;
+}
+
+.group:hover .service-card-node {
+  fill: var(--card-accent);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -168,5 +288,13 @@ textarea {
   .reveal {
     opacity: 1;
     transform: none;
+  }
+
+  .ai-scanline,
+  .ai-graph-link,
+  .service-map-link,
+  .ai-node,
+  .group:hover .service-card-node {
+    animation: none !important;
   }
 }
