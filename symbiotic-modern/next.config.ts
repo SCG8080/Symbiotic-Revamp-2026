@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: "/Symbiotic-Website-2026",
+  basePath: "/Symbiotic-Revamp-2026",
   images: {
     unoptimized: true,
   },
