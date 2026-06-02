@@ -90,7 +90,6 @@ export const routes: RouteRecord[] = [
 ];
 
 export const legacyRouteAliases: Record<string, string> = {
-  "/index.html": "/",
   "/about.html": "/about",
   "/key capabalities.html": "/key-capabilities",
   "/key capabilities.html": "/key-capabilities",

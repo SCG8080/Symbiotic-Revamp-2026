@@ -40,7 +40,7 @@ export function SiteFooter() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               {company.socials.map((social) => {
-                let SocialIcon = ExternalLink;
+                let SocialIcon: React.ElementType = ExternalLink;
                 if (social.label === "LinkedIn") SocialIcon = Linkedin;
                 if (social.label === "Facebook") SocialIcon = Facebook;
                 if (social.label === "YouTube") SocialIcon = Youtube;
