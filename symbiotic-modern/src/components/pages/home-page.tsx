@@ -66,11 +66,11 @@ export function HomePage() {
                 <p className="microcopy mt-3 lg:mt-4 xl:mt-6 max-w-2xl text-sm lg:text-xs xl:text-lg 2xl:text-xl leading-relaxed text-slate-300">
                   Accelerate your development, optimize your infrastructure, and scale your workforce with SCG's AI-driven delivery models.
                 </p>
-                <div className="mt-4 lg:mt-6 xl:mt-10 flex flex-wrap gap-2 lg:gap-3 xl:gap-4">
-                  <ButtonLink href="/services" variant="primary" className="text-xs xl:text-sm px-4 xl:px-6 py-2 xl:py-3">
+                <div className="mt-4 lg:mt-6 xl:mt-10 flex flex-wrap gap-2 lg:gap-3 xl:gap-4 origin-left scale-90 xl:scale-100">
+                  <ButtonLink href="/services" variant="primary">
                     Explore Services
                   </ButtonLink>
-                  <ButtonLink href="/contact" variant="secondary" className="text-xs xl:text-sm px-4 xl:px-6 py-2 xl:py-3">
+                  <ButtonLink href="/contact" variant="secondary">
                     Partner with us
                   </ButtonLink>
                 </div>
