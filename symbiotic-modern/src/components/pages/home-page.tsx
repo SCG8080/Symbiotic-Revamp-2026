@@ -78,18 +78,19 @@ export function HomePage() {
             </Reveal>
             
             <Reveal delay={200}>
-              <div className="relative group perspective-1000 w-full max-w-sm mx-auto lg:w-[320px] xl:w-[480px] hidden lg:block lg:ml-auto">
+              <div className="relative group perspective-1000 w-full hidden lg:flex flex-col items-end justify-center min-h-0 h-full max-h-[65vh]">
                 {/* Massive ambient glow that changes color and expands on hover */}
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-scg-teal via-scg-blue to-scg-green opacity-20 blur-[80px] transition-all duration-700 group-hover:opacity-70 group-hover:blur-[120px] group-hover:scale-110 pointer-events-none" />
+                <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[80%] h-[80%] rounded-2xl bg-gradient-to-tr from-scg-teal via-scg-blue to-scg-green opacity-20 blur-[80px] transition-all duration-700 group-hover:opacity-70 group-hover:blur-[120px] group-hover:scale-110 pointer-events-none" />
                 
-                {/* Image container with strict aspect ratio constraint */}
-                <div className="relative z-10 w-full aspect-[4/3] overflow-hidden rounded-3xl border border-white/10 bg-obsidian-light/50 p-1.5 xl:p-2 backdrop-blur-sm shadow-2xl transition-all duration-700 group-hover:-translate-y-4 group-hover:border-scg-teal/50 group-hover:shadow-[0_40px_80px_rgba(0,168,153,0.3)] flex items-center justify-center">
-                  <div className="relative w-full h-full rounded-2xl overflow-hidden">
+                {/* Image container scales to max height available without cropping */}
+                <div className="relative z-10 h-full w-auto max-w-full rounded-3xl border border-white/10 bg-obsidian-light/50 p-1.5 xl:p-2 backdrop-blur-sm shadow-2xl transition-all duration-700 group-hover:-translate-y-4 group-hover:border-scg-teal/50 group-hover:shadow-[0_40px_80px_rgba(0,168,153,0.3)] inline-flex items-center justify-center min-h-0 overflow-hidden ml-auto">
+                  <div className="relative h-full w-auto rounded-2xl overflow-hidden flex items-center justify-center">
                     <Image 
                       src="/Images/SCG-Banner.jpeg" 
                       alt="SCG Technology Framework" 
-                      fill
-                      className="object-cover opacity-90 mix-blend-screen transition-all duration-700 group-hover:opacity-100 group-hover:scale-105 group-hover:mix-blend-normal" 
+                      width={1200}
+                      height={800}
+                      className="w-auto h-full max-h-[60vh] object-contain opacity-90 mix-blend-screen transition-all duration-700 group-hover:opacity-100 group-hover:scale-105 group-hover:mix-blend-normal" 
                       priority
                     />
                   </div>
